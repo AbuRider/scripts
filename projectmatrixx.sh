@@ -47,5 +47,4 @@ echo "======= Export Done ======"
 
 # initiate build setup
 . build/envsetup.sh
-make installclean
 brunch earth userdebug
