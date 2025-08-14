@@ -17,6 +17,14 @@ echo " sync repository success..."
 echo "==========================="
 
 # dontol kucai
+rm -rf device/xiaomi/earth
+rm -rf kernel/xiaomi/earth
+rm -rf vendor/xiaomi/earth
+rm -rf hardware/mediatek
+rm -rf hardware/xiaomi
+rm -rf device/mediatek/sepolicy_vndr
+rm -rf vendor/lineage-priv/keys
+
 git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Derpfest-13 device/xiaomi/earth
 
 git clone https://github.com/mt6768-dev/proprietary_vendor_xiaomi_earth.git -b lineage-20 vendor/xiaomi/earth
@@ -33,7 +41,7 @@ git clone https://github.com/AbuRider/vendor_extra.git -b master vendor/lineage-
 
 # Export
 export BUILD_USERNAME=yusup
-export BUILD_HOSTNAME=crave
+export BUILD_HOSTNAME=priatampan
 export TZ=Asia/Jakarta
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 
