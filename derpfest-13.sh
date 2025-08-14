@@ -27,15 +27,15 @@ rm -rf vendor/lineage-priv/keys
 
 git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Derpfest-13 device/xiaomi/earth
 
-git clone https://github.com/mt6768-dev/proprietary_vendor_xiaomi_earth.git -b lineage-20 vendor/xiaomi/earth
+git clone https://github.com/AbuRider/proprietary_vendor_xiaomi_earth.git -b lineage-20 vendor/xiaomi/earth
 
 git clone https://github.com/LineageOS/android_kernel_xiaomi_earth.git -b lineage-22.2 kernel/xiaomi/earth
 
-git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-20 hardware/xiaomi
+git clone https://github.com/AbuRider/android_hardware_xiaomi.git -b lineage-20 hardware/xiaomi
 
 git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-20 hardware/mediatek
 
-git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-20 device/mediatek/sepolicy_vndr
+git clone https://github.com/AbuRider/android_device_mediatek_sepolicy_vndr.git -b lineage-20 device/mediatek/sepolicy_vndr
 
 git clone https://github.com/AbuRider/vendor_extra.git -b master vendor/lineage-priv/keys
 
