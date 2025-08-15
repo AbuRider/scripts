@@ -39,6 +39,10 @@ git clone https://github.com/AbuRider/android_device_mediatek_sepolicy_vndr.git 
 
 git clone https://github.com/AbuRider/sign_keys_priv.git -b main vendor/lineage-priv/keys
 
+# test
+rm -rf system/sepolicy
+git clone --depth=1 https://github.com/AbuRider/system_sepolicy_derpfest.git -b 13 system/sepolicy
+
 # Export
 export BUILD_USERNAME=yusup
 export BUILD_HOSTNAME=priatampan
