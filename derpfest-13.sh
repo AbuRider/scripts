@@ -37,7 +37,7 @@ git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-
 
 git clone https://github.com/AbuRider/android_device_mediatek_sepolicy_vndr.git -b lineage-20 device/mediatek/sepolicy_vndr
 
-git clone https://github.com/AbuRider/vendor_extra.git -b master vendor/lineage-priv/keys
+git clone https://github.com/AbuRider/sign_keys_priv.git -b main vendor/lineage-priv/keys
 
 # Export
 export BUILD_USERNAME=yusup
@@ -48,4 +48,5 @@ export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 # initiate build setup
 . build/envsetup.sh
 lunch derp_earth-userdebug
+make installclean
 mka derp -j$(nproc --all)
