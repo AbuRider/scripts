@@ -16,14 +16,6 @@ echo "Sync success"
 echo "============="
 
 # clone trees bg
-rm -rf device/xiaomi/earth
-rm -rf kernel/xiaomi/earth
-rm -rf vendor/xiaomi/earth
-rm -rf hardware/xiaomi
-rm -rf hardware/mediatek
-rm -rf device/mediatek/sepolicy_vndr
-rm -rf vendor/priv-keys
-
 git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Lmodroid-15 device/xiaomi/earth
 
 git clone https://github.com/AbuRider/proprietary_vendor_xiaomi_earth.git -b lineage-22.2 vendor/xiaomi/earth
@@ -37,6 +29,11 @@ git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-
 git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-22.2 device/mediatek/sepolicy_vndr
 
 git clone https://github.com/AbuRider/sign_keys_priv.git -b lmaodroid vendor/lmodroid-priv/keys 
+
+# Fix eror
+rm -rf frameworks/base
+rm -rf packages/services/Car
+git clone --depth=1 https://github.com/AbuRider/platform_frameworks_base.git -b fifteen-qpr1 frameworks/base
 
 # Export
 export BUILD_USERNAME=yusup
