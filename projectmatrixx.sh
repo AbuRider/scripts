@@ -24,7 +24,7 @@ rm -rf vendor/xiaomi/earth
 rm -rf device/mediatek/sepolicy_vndr
 rm -rf vendor/lineage-priv/keys
 
-git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b matrixx device/xiaomi/earth
+git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Matrixx device/xiaomi/earth
 
 git clone https://github.com/mt6768-dev/proprietary_vendor_xiaomi_earth.git -b lineage-22.2 vendor/xiaomi/earth
 
@@ -39,11 +39,9 @@ git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git
 git clone https://github.com/AbuRider/sign_keys_priv.git -b main vendor/lineage-priv/keys
 
 # Export
-export BUILD_USERNAME=yusup
-export BUILD_HOSTNAME=crave
+export BUILD_USERNAME=dnryd
+export BUILD_HOSTNAME=pangokceria
 export TZ=Asia/Jakarta
-export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
-echo "======= Export Done ======"
 
 # initiate build setup
 . build/envsetup.sh
