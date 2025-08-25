@@ -40,4 +40,5 @@ export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 # initiate build setup
 . build/envsetup.sh
 lunch lineage_earth-userdebug
+make installclean
 m evolution -j$(nproc --all)
