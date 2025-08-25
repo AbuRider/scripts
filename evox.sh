@@ -35,6 +35,7 @@ export BUILD_USERNAME=dnryd
 export BUILD_HOSTNAME=pangokceria
 export TZ=Asia/Jakarta
 export RELAX_USES_LIBRARY_CHECK=true
+export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 
 # initiate build setup
 . build/envsetup.sh
