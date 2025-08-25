@@ -34,6 +34,7 @@ git clone https://github.com/AbuRider/sign_keys_priv.git -b evox vendor/evolutio
 export BUILD_USERNAME=dnryd
 export BUILD_HOSTNAME=pangokceria
 export TZ=Asia/Jakarta
+export RELAX_USES_LIBRARY_CHECK=true
 
 # initiate build setup
 . build/envsetup.sh
