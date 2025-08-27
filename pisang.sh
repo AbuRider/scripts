@@ -36,4 +36,4 @@ export TZ=Asia/Jakarta
 # initiate build setup
 . build/envsetup.sh
 lunch banana_earth-userdebug
-m bacon -j$(nproc --all)
+m banana -j$(nproc --all)
