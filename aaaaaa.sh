@@ -16,7 +16,9 @@ echo "Sync success"
 echo "============="
 
 # Delete some stuff
-echo "yahahahaha"
+rm -rf packages/apps/Settings
+rm -rf packages/apps/AfterHome
+rm -rf frameworks/base
 
 # Clone Trees
 git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Afterlife-14 device/xiaomi/earth
@@ -28,6 +30,11 @@ git clone https://github.com/LineageOS/android_kernel_xiaomi_earth.git -b lineag
 git clone https://github.com/AbuRider/android_device_mediatek_sepolicy_vndr.git -b after-14 device/mediatek/sepolicy_vndr
 
 git clone https://github.com/AbuRider/signing_keys.git -b afterlife vendor/after-priv/keys
+
+# Add new dependencies for fix eror
+git clone https://github.com/AbuRider/afl_packages_apps_Settings.git -b 14 packages/apps/Settings --depth=1
+git clone https://github.com/AbuRider/packages_apps_AfterHome.git -b 14 packages/apps/AfterHome --depth=1 
+git clone https://github.com/AbuRider/frameworks_base_afl.git -b 14 frameworks/base --depth=1
 
 # Export
 export BUILD_USERNAME=dnryd
