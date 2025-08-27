@@ -4,7 +4,7 @@
 rm -rf prebuilts/clang/host/linux-x86
 
 # repo init rom
-repo init -u https://github.com/AbuRided/bananadroid_manifest.git -b 13 --git-lfs
+repo init -u https://github.com/AbuRider/bananadroid_manifest.git -b 13 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
