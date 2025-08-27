@@ -16,7 +16,12 @@ echo "Sync success"
 echo "============="
 
 # Delete some stuff
+rm -rf device/xiaomi/earth
+rm -rf kernel/xiaomi/earth
+rm -rf vendor/xiaomi/earth 
+rm -rf hardware/mediatek
 rm -rf device/mediatek/sepolicy_vndr
+rm -rf prebuilts/clang/host/linux-x86
 
 # Clone Trees
 git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b pisang device/xiaomi/earth
@@ -29,7 +34,9 @@ git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-
 
 git clone https://github.com/AbuRider/android_device_mediatek_sepolicy_vndr.git -b lineage-20 device/mediatek/sepolicy_vndr
 
-# git clone https://github.com/AbuRider/sign_keys_priv.git -b main vendor/lineage-priv/keys
+git clone https://github.com/AbuRider/signing_keys.git -b banana vendor/lineage-priv/keys
+
+git clone --depth=1 https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86 -b android-13.0.0_r43 prebuilts/clang/host/linux-x86
 
 # Export
 export BUILD_USERNAME=dnryd
