@@ -34,7 +34,7 @@ git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-
 
 git clone https://github.com/AbuRider/android_device_mediatek_sepolicy_vndr.git -b lineage-20 device/mediatek/sepolicy_vndr
 
-git clone https://github.com/AbuRider/signing_keys.git -b banana vendor/lineage-priv/keys
+git clone https://github.com/AbuRider/signing_keys.git -b banana vendor/banana-priv/keys
 
 git clone --depth=1 https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86 -b android-13.0.0_r43 prebuilts/clang/host/linux-x86
 
