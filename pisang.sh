@@ -15,10 +15,13 @@ echo "============="
 echo "Sync success"
 echo "============="
 
-# trees
+# Delete some stuff
+rm -rf device/mediatek/sepolicy_vndr
+
+# Clone Trees
 git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b pisang device/xiaomi/earth
 
-git clone https://github.com/mt6768-dev/proprietary_vendor_xiaomi_earth.git -b lineage-20 vendor/xiaomi/earth
+git clone https://github.com/AbuRider/proprietary_vendor_xiaomi_earth.git -b lineage-20 vendor/xiaomi/earth
 
 git clone https://github.com/LineageOS/android_kernel_xiaomi_earth.git -b lineage-22.2 kernel/xiaomi/earth
 
