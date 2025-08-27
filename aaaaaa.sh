@@ -25,9 +25,7 @@ git clone https://github.com/AbuRider/proprietary_vendor_xiaomi_earth.git -b lin
 
 git clone https://github.com/LineageOS/android_kernel_xiaomi_earth.git -b lineage-22.2 kernel/xiaomi/earth
 
-git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-21 hardware/mediatek
-
-git clone https://github.com/AbuRider/android_device_mediatek_sepolicy_vndr.git -b afterlife device/mediatek/sepolicy_vndr
+git clone https://github.com/AbuRider/android_device_mediatek_sepolicy_vndr.git -b after-14 device/mediatek/sepolicy_vndr
 
 git clone https://github.com/AbuRider/signing_keys.git -b afterlife vendor/after-priv/keys
 
