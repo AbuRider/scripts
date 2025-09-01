@@ -4,7 +4,7 @@
 rm -rf prebuilts/clang/host/linux-x86
 
 # repo init rom
-repo init -u https://github.com/ProjectMatrixx/android.git -b 15.0 --git-lfs
+repo init -u https://github.com/Black-Iron-Project/manifest -b v15_QPR2 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
@@ -24,7 +24,7 @@ rm -rf vendor/xiaomi/earth
 rm -rf device/mediatek/sepolicy_vndr
 rm -rf vendor/lineage-priv/keys
 
-git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Matrixx device/xiaomi/earth
+git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b BesiHitam device/xiaomi/earth
 
 git clone https://github.com/mt6768-dev/proprietary_vendor_xiaomi_earth.git -b lineage-22.2 vendor/xiaomi/earth
 
@@ -45,4 +45,5 @@ export TZ=Asia/Jakarta
 
 # initiate build setup
 . build/envsetup.sh
-brunch earth userdebug
+blkilunch earth userdebug
+blki b -j$(nproc --all)
