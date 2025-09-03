@@ -10,7 +10,7 @@ echo "Repo init success"
 echo "=================="
 
 # sync
-/opt/crave/resync.sh || repo sync
+/opt/crave/resync.sh
 echo "============="
 echo "Sync success"
 echo "============="
