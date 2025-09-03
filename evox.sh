@@ -16,7 +16,7 @@ echo "Sync success"
 echo "============="
 
 # trees
-git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Evox-15 device/xiaomi/earth
+git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b EvolutionX device/xiaomi/earth
 
 git clone https://github.com/mt6768-dev/proprietary_vendor_xiaomi_earth.git -b lineage-22.2 vendor/xiaomi/earth
 
@@ -28,7 +28,7 @@ git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-
 
 git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-22.2 device/mediatek/sepolicy_vndr
 
-git clone https://github.com/AbuRider/sign_keys_priv.git -b evox vendor/evolution-priv/keys
+git clone https://github.com/AbuRider/signing_keys.git -b evox vendor/evolution-priv/keys
 
 # Export
 export BUILD_USERNAME=dnryd
