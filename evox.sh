@@ -34,7 +34,6 @@ git clone https://github.com/AbuRider/signing_keys.git -b evox vendor/evolution-
 export BUILD_USERNAME=dnryd
 export BUILD_HOSTNAME=pangokceria
 export TZ=Asia/Jakarta
-export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 
 # initiate build setup
 . build/envsetup.sh
