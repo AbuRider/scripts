@@ -38,5 +38,5 @@ export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 
 # initiate build setup
 . build/envsetup.sh
-lunch lineage_earth-bp1a-userdebug
+lunch lineage_earth-bp2a-userdebug
 m evolution -j$(nproc --all)
