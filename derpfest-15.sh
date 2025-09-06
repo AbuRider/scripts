@@ -16,6 +16,9 @@ echo "==========================="
 echo " sync repository success..."
 echo "==========================="
 
+# remove
+rm -rf device/xiaomi/earth
+
 # dontol kucai
 git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Derpfest-16 device/xiaomi/earth
 
