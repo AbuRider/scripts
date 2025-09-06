@@ -24,7 +24,7 @@ git clone https://github.com/LineageOS/android_kernel_xiaomi_earth.git -b lineag
 
 git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-23.0 hardware/xiaomi
 
-git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-23.0 hardware/mediatek
+git clone https://github.com/Aeron-Aeron/hardware_mediatek.git -b lineage-23.0 hardware/mediatek
 
 git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-23.0 device/mediatek/sepolicy_vndr
 
