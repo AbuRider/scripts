@@ -28,6 +28,8 @@ git clone https://github.com/Aeron-Aeron/hardware_mediatek.git -b lineage-23.0 h
 
 git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-23.0 device/mediatek/sepolicy_vndr
 
+git clone https://github.com/techyminati/android_vendor_mediatek_ims vendor/mediatek/ims
+
 git clone https://github.com/AbuRider/signing_keys.git -b evox vendor/evolution-priv/keys
 
 # Export
