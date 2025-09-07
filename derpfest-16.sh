@@ -18,6 +18,13 @@ echo "==========================="
 
 # remove
 rm -rf device/xiaomi/earth
+rm -rf vendor/xiaomi/earth
+rm -rf kernel/xiaomi/earth
+rm -rf hardware/xiaomi
+rm -rf hardware/mediatek
+rm -rf device/mediatek/sepolicy_vndr
+rm -rf vendor/mediatek/ims
+rm -rf vendor/lineage-priv/keys
 
 # dontol kucai
 git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Derpfest-16 device/xiaomi/earth
