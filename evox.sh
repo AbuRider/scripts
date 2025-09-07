@@ -43,4 +43,5 @@ export TZ=Asia/Jakarta
 # initiate build setup
 . build/envsetup.sh
 lunch lineage_earth-bp2a-userdebug
+make installclean
 m evolution -j$(nproc --all)
