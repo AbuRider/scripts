@@ -10,14 +10,19 @@ echo "Repo init success"
 echo "=================="
 
 # sync
-/opt/crave/resync.sh
+/opt/crave/resync.sh || repo sync
 echo "============="
 echo "Sync success"
 echo "============="
 
 # Remove
+rm -rf device/xiaomi/earth
+rm -rf kernel/xiaomi/earth
+rm -rf vendor/xiaomi/earth
+rm -rf hardware/xiaomi
 rm -rf hardware/mediatek
-rm -rf bionic
+rm -rf device/mediatek/sepolicy_vndr
+rm -rf vendor/evolution-priv/keys
 
 # trees
 git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b EvolutionX-16 device/xiaomi/earth
@@ -37,6 +42,7 @@ git clone https://github.com/techyminati/android_vendor_mediatek_ims vendor/medi
 git clone https://github.com/AbuRider/signing_keys.git -b evox vendor/evolution-priv/keys
 
 # Fix Emror
+rm -rf bionic
 git clone --depth=1 https://github.com/AbuRider/bionic_evok.git -b bka bionic
 
 # Export
@@ -47,5 +53,4 @@ export TZ=Asia/Jakarta
 # initiate build setup
 . build/envsetup.sh
 lunch lineage_earth-bp2a-userdebug
-make installclean
 m evolution -j$(nproc --all)
