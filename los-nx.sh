@@ -38,6 +38,8 @@ git clone --depth=1 https://github.com/AbuRider/android_vendor_lineage_jatim.git
 # Export
 export BUILD_USERNAME=aisy
 export BUILD_HOSTNAME=umbrella
+export KBUILD_USERNAME=aisy
+export KBUILD_HOSTNAME=pangokceria
 export TZ=Asia/Jakarta
 
 # initiate build setup
