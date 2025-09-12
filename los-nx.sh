@@ -33,7 +33,7 @@ git clone https://github.com/AbuRider/signing_keys.git -b main vendor/lineage-pr
 
 # Remove New QS A15 Qpr2
 rm -rf vendor/lineage
-git clone --depth=1 vendor/lineage
+git clone --depth=1 https://github.com/AbuRider/android_vendor_lineage_jatim.git vendor/lineage
 
 # Export
 export BUILD_USERNAME=aisy
