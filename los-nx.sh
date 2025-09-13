@@ -16,6 +16,13 @@ echo "Sync success"
 echo "============="
 
 # Cloning Trees
+rm -rf device/xiaomi/earth
+rm -rf vendor/xiaomi/earth
+rm -rf kernel/xiaomi/earth
+rm -rf hardware/mediatek
+rm -rf hardware/xiaomi
+rm -rf device/mediatek/sepolicy_vndr
+rm -rf vendor/lineage-priv/keys
 
 git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b lineage-22.2 device/xiaomi/earth
 
