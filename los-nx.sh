@@ -4,7 +4,7 @@
 rm -rf prebuilts/clang/host/linux-x86
 
 # repo init rom
-repo init -u https://github.com/los-nx/android.git -b lineage-22.2 --git-lfs
+repo init -u https://github.com/AbuRider/android_los-nx.git -b lineage-22.2 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
