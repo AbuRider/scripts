@@ -35,6 +35,8 @@ git clone https://github.com/AbuRider/signing_keys.git -b main vendor/lineage-pr
 # Export
 export BUILD_USERNAME=rr
 export BUILD_HOSTNAME=umbrella
+export KBUILD_USERNAME=aisy
+export KBUILD_HOSTNAME=umbrella
 export TZ=Asia/Jakarta
 
 # initiate build setup
