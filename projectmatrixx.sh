@@ -16,6 +16,8 @@ echo "Sync success"
 echo "============="
 
 # dontol kucai
+rm -rf device/xiaomi/earth
+
 git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Matrixx device/xiaomi/earth
 
 git clone https://github.com/mt6768-dev/proprietary_vendor_xiaomi_earth.git -b lineage-22.2 vendor/xiaomi/earth
