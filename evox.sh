@@ -40,8 +40,8 @@ git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git
 git clone https://github.com/AbuRider/signing_keys.git -b evox vendor/evolution-priv/keys
 
 # Export
-export BUILD_USERNAME=rr
-export BUILD_HOSTNAME=aisy
+export BUILD_USERNAME=aisy
+export BUILD_HOSTNAME=umbrella
 export TZ=Asia/Jakarta
 
 # initiate build setup
