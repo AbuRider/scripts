@@ -4,7 +4,7 @@
 rm -rf prebuilts/clang/host/linux-x86
 
 # repo init rom
-repo init -u https://github.com/Evolution-X/manifest -b vic --git-lfs
+repo init -u https://github.com/Evolution-X/manifest -b udc --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
@@ -25,17 +25,17 @@ rm -rf device/mediatek/sepolicy_vndr
 rm -rf vendor/evolution-priv/keys
 
 # trees
-git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b EvolutionX-15 device/xiaomi/earth
+git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b EvolutionX-14 device/xiaomi/earth
 
-git clone https://github.com/AbuRider/proprietary_vendor_xiaomi_earth.git -b lineage-22.2 vendor/xiaomi/earth
+git clone https://github.com/AbuRider/proprietary_vendor_xiaomi_earth.git -b lineage-21 vendor/xiaomi/earth
 
-git clone https://github.com/LineageOS/android_kernel_xiaomi_earth.git -b lineage-22.2 kernel/xiaomi/earth
+git clone https://github.com/AbuRider/android_kernel_xiaomi_earth.git -b cip-dt2w kernel/xiaomi/earth
 
-git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-22.2 hardware/xiaomi
+git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-21 hardware/xiaomi
 
-git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-22.2 hardware/mediatek
+git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-21 hardware/mediatek
 
-git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-22.2 device/mediatek/sepolicy_vndr
+git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-21 device/mediatek/sepolicy_vndr
 
 git clone https://github.com/AbuRider/signing_keys.git -b evox vendor/evolution-priv/keys
 
@@ -46,5 +46,5 @@ export TZ=Asia/Jakarta
 
 # initiate build setup
 . build/envsetup.sh
-lunch lineage_earth-bp1a-userdebug
+lunch lineage_earth-userdebug
 m evolution -j$(nproc --all)
