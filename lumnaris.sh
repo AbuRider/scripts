@@ -32,6 +32,10 @@ git clone https://github.com/techyminati/android_vendor_mediatek_ims vendor/medi
 
 git clone https://github.com/AbuRider/signing_keys.git -b main vendor/lineage-priv/keys
 
+# Remove Error
+rm -rf bionic
+git clone --depth=1 https://github.com/AbuRider/bionic_lunaris.git bionic
+
 # Export
 export BUILD_USERNAME=aisy
 export BUILD_HOSTNAME=umbrella
