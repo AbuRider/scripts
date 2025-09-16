@@ -16,7 +16,7 @@ echo " sync repository success..."
 echo "==========================="
 
 # dontol kucai
-git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Derpfest-16 device/xiaomi/earth
+git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Lunaris-16 device/xiaomi/earth
 
 git clone https://github.com/AbuRider/proprietary_vendor_xiaomi_earth.git -b lineage-23 vendor/xiaomi/earth
 
