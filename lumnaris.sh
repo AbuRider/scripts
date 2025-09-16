@@ -16,6 +16,9 @@ echo " sync repository success..."
 echo "==========================="
 
 # dontol kucai
+rm -rf device/xiaomi/earth
+rm -rf vendor/lineage-priv/keys
+
 git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Lunaris-16 device/xiaomi/earth
 
 git clone https://github.com/AbuRider/proprietary_vendor_xiaomi_earth.git -b lineage-23 vendor/xiaomi/earth
@@ -30,7 +33,7 @@ git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git
 
 git clone https://github.com/techyminati/android_vendor_mediatek_ims vendor/mediatek/ims
 
-git clone https://github.com/AbuRider/signing_keys.git -b main vendor/lineage-priv/keys
+git clone https://github.com/AbuRider/signing_keys.git -b luna vendor/lunaris-priv/keys
 
 # Remove Error
 rm -rf bionic
