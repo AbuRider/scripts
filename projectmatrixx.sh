@@ -4,7 +4,7 @@
 rm -rf prebuilts/clang/host/linux-x86
 
 # repo init rom
-repo init -u https://github.com/AbuRider/android_manifest_matrixx.git -b 15.0 --git-lfs
+repo init -u https://github.com/ProjectMatrixx/android.git -b 15.0 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
@@ -35,8 +35,8 @@ git clone https://github.com/AbuRider/signing_keys.git -b main vendor/lineage-pr
 # Export
 export BUILD_USERNAME=rr
 export BUILD_HOSTNAME=umbrella
-export KBUILD_USERNAME=aisy
-export KBUILD_HOSTNAME=umbrella
+export KBUILD_BUILD_USER=aisy
+export KBUILD_BUILD_HOST=pangokceria
 export TZ=Asia/Jakarta
 
 # initiate build setup
