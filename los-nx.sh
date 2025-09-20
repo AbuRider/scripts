@@ -39,10 +39,10 @@ git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git
 git clone https://github.com/AbuRider/signing_keys.git -b main vendor/lineage-priv/keys
 
 # Export
-export BUILD_USERNAME=aisy
+export BUILD_USERNAME=rora
 export BUILD_HOSTNAME=umbrella
 export KBUILD_BUILD_USER=aisy
-export KBUILD_BUILD_HOST=pangokceria
+export KBUILD_BUILD_HOST=myrora
 export TZ=Asia/Jakarta
 
 # initiate build setup
