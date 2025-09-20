@@ -4,7 +4,7 @@
 rm -rf prebuilts/clang/host/linux-x86
 
 # repo init rom
-repo init -u https://github.com/AbuRider/android_los-nx.git -b lineage-22.2 --git-lfs
+repo init -u https://github.com/los-nx/android.git -b lineage-22.2 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
@@ -28,7 +28,7 @@ git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b lineage
 
 git clone https://github.com/mt6768-dev/proprietary_vendor_xiaomi_earth.git -b lineage-22.2 vendor/xiaomi/earth
 
-git clone https://github.com/LineageOS/android_kernel_xiaomi_earth.git -b lineage-22.2 kernel/xiaomi/earth
+git clone https://github.com/AbuRider/android_kernel_xiaomi_earth.git -b cip-dt2w kernel/xiaomi/earth
 
 git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-22.2 hardware/xiaomi
 
@@ -38,15 +38,11 @@ git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git
 
 git clone https://github.com/AbuRider/signing_keys.git -b main vendor/lineage-priv/keys
 
-# Remove New QS A15 Qpr2
-rm -rf vendor/lineage
-git clone --depth=1 https://github.com/AbuRider/android_vendor_lineage_jatim.git -b lineage-22.2 vendor/lineage
-
 # Export
 export BUILD_USERNAME=aisy
 export BUILD_HOSTNAME=umbrella
-export KBUILD_USERNAME=aisy
-export KBUILD_HOSTNAME=pangokceria
+export KBUILD_BUILD_USER=aisy
+export KBUILD_BUILD_HOST=pangokceria
 export TZ=Asia/Jakarta
 
 # initiate build setup
