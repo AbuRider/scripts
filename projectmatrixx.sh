@@ -16,6 +16,13 @@ echo "Sync success"
 echo "============="
 
 # cloning trees
+rm -rf device/xiaomi/earth
+rm -rf kernel/xiaomi/earth
+rm -rf vendor/xiaomi/earth
+rm -rf hardware/mediatek
+rm -rf hardware/xiaomi
+rm -rf device/mediatek/sepolicy_vndr
+rm -rf vendor/lineage/priv-keys
 
 git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Matrixx device/xiaomi/earth
 
@@ -30,6 +37,10 @@ git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-
 git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-22.2 device/mediatek/sepolicy_vndr
 
 git clone https://github.com/AbuRider/signing_keys.git -b main vendor/lineage-priv/keys
+
+# test
+rm -rf packages/apps/LMOFreeform
+git clone https://github.com/AbuRider/android_packages_apps_LMOFreeform.git packages/apps/LMOFreeform
 
 # Export
 export BUILD_USERNAME=rr
