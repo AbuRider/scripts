@@ -4,6 +4,14 @@ rm -rf prebuilts/clang/host/linux-x86
 # repo init
 repo init -u https://github.com/ProjectMatrixx/android.git -b 15.0 --git-lfs
 /opt/crave/resync.sh || repo sync
+# remove trees
+rm -rf device/xiaomi/earth 
+rm -rf vendor/xiaomi/earth
+rm -rf kernel/xiaomi/earth
+rm -rf hardware/mediatek
+rm -rf hardware/xiaomi
+rm -rf device/mediatek/sepolicy_vndr
+rm -rf vendor/lineage-priv/keys
 # cloning trees
 git clone https://github.com/AbuRider/device_xiaomi_earth.git -b Matrixx device/xiaomi/earth
 git clone https://github.com/mt6768-dev/proprietary_vendor_xiaomi_earth.git -b lineage-22.2 vendor/xiaomi/earth
@@ -18,4 +26,5 @@ export BUILD_HOSTNAME=pangokceria
 export TZ=Asia/Jakarta
 # starts build setup !
 . build/envsetup.sh
-brunch earth
+lunch lineage_earth-bp1a-user
+mka bacon -j$(nproc --all)
