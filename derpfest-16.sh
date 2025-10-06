@@ -16,7 +16,7 @@ git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-
 git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-23.0 device/mediatek/sepolicy_vndr
 git clone https://github.com/AbuRider/signing_keys.git -b main vendor/lineage-priv/keys
 # Export
-export BUILD_USERNAME=yusup
+export BUILD_USERNAME=dnryd
 export BUILD_HOSTNAME=pangokceria
 export TZ=Asia/Jakarta
 # initiate build setup
