@@ -30,10 +30,13 @@ git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git
 
 git clone https://github.com/AbuRider/signing_keys.git -b main vendor/lineage-priv/keys
 
+# Fix Error
+rm -rf hardware/lineage/interfaces
+git clone --depth=1 https://github.com/LineageOS/android_hardware_lineage_interfaces.git -b lineage-22.2 hardware/lineage/interfaces
+
 # Export
 export BUILD_USERNAME=rora
 export BUILD_HOSTNAME=pangokceria
-export ALLOW_MISSING_DEPENDENCIES=true
 export TZ=Asia/Jakarta
 
 # initiate build setup
