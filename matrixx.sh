@@ -20,7 +20,7 @@ git clone https://github.com/AbuRider/device_xiaomi_earth.git -b Matrixx device/
 
 git clone https://github.com/AbuRider/proprietary_vendor_xiaomi_earth.git -b lineage-22.2 vendor/xiaomi/earth
 
-git clone https://github.com/AbuRider/android_kernel_xiaomi_earth.git -b lineage-22.2 kernel/xiaomi/earth
+git clone https://github.com/LineageOS/android_kernel_xiaomi_earth.git -b lineage-22.2 kernel/xiaomi/earth
 
 git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-22.2 hardware/xiaomi
 
