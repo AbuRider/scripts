@@ -26,7 +26,7 @@ git clone https://github.com/AbuRider/signing_keys.git -b evox vendor/evolution-
 # Export
 export BUILD_USERNAME=dnryd
 export BUILD_HOSTNAME=pangokceria
-export TZ=Asia/Jakarta
+export TZ="Asia/Jakarta"
 # starts build setup !
 . build/envsetup.sh
 lunch lineage_earth-bp2a-userdebug
