@@ -22,7 +22,7 @@ git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-23
 git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-23.0 hardware/mediatek
 git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-23.0 device/mediatek/sepolicy_vndr
 # Signing rom
-git clone https://github.com/AbuRider/signing_keys.git -b evox vendor/evolution-priv/keys
+git clone https://github.com/AbuRider/priv_keys.git -b evox vendor/evolution-priv/keys
 # Export
 export BUILD_USERNAME=dnryd
 export BUILD_HOSTNAME=pangokceria
