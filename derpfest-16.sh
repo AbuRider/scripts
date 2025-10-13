@@ -14,12 +14,12 @@ git clone https://github.com/mt6768-dev/android_kernel_xiaomi_earth.git -b linea
 git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-23.0 hardware/xiaomi
 git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-23.0 hardware/mediatek
 git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-23.0 device/mediatek/sepolicy_vndr
-git clone https://github.com/AbuRider/signing_keys.git -b main vendor/lineage-priv/keys
+git clone https://github.com/AbuRider/priv_keys -b main vendor/lineage-priv/keys
 # Export
 export BUILD_USERNAME=dnryd
 export BUILD_HOSTNAME=pangokceria
 export TZ=Asia/Jakarta
 # initiate build setup
 . build/envsetup.sh
-lunch lineage_earth-bp2a-userdebug
+lunch lineage_earth-bp2a-user
 mka derp -j$(nproc --all)
