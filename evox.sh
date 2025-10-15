@@ -16,8 +16,9 @@ git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git
 # Signing rom
 git clone https://github.com/AbuRider/priv_keys.git -b evox vendor/evolution-priv/keys
 # Export
-export BUILD_USERNAME=dnr
-export BUILD_HOSTNAME=pangokceria
+export BUILD_USERNAME=mugis
+export BUILD_HOSTNAME=rumiaprjkt
+export RELAX_USES_LIBRARY_CHECK=true
 export TZ="Asia/Jakarta"
 # starts build setup !
 . build/envsetup.sh
