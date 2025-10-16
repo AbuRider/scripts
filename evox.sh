@@ -5,6 +5,14 @@ rm -rf prebuilts/clang/host/linux-x86
 repo init -u https://github.com/Evolution-X/manifest -b udc --git-lfs 
 # Sync repository
 /opt/crave/resync.sh || repo sync
+# Remove
+rm -rf device/xiaomi/earth
+rm -rf vendor/xiaomi/earth
+rm -rf kernel/xiaomi/earth
+rm -rf hardware/mediatek
+rm -rf hardware/xiaomi
+rm -rf device/mediatek/sepolicy_vndr
+rm -rf vendor/evolution-priv/keys
 # cloning trees
 git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b EvolutionX-14 device/xiaomi/earth
 git clone https://github.com/mt6768-dev/proprietary_vendor_xiaomi_earth.git -b lineage-21 vendor/xiaomi/earth
