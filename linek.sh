@@ -16,7 +16,7 @@ git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git
 git clone https://github.com/AbuRider/priv_keys.git -b main vendor/lineage-priv/keys
 # Export
 export BUILD_USERNAME=mugis
-export BUILD_HOSTNAME=rumiaprjkt
+export BUILD_HOSTNAME=pangokceria
 export TZ="Asia/Jakarta"
 # starts build setup !
 . build/envsetup.sh
