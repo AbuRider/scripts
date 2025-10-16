@@ -5,7 +5,7 @@ rm -rf prebuilts/clang/host/linux-x86
 repo init -u https://github.com/Evolution-X/manifest -b udc --git-lfs 
 # Sync repository
 /opt/crave/resync.sh || repo sync
-# Remove
+# Remove old stuff's
 rm -rf device/xiaomi/earth
 rm -rf vendor/xiaomi/earth
 rm -rf kernel/xiaomi/earth
