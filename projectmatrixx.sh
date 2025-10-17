@@ -14,6 +14,9 @@ git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-22
 git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-22.2 hardware/mediatek
 git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-22.2 device/mediatek/sepolicy_vndr
 git clone https://github.com/AbuRider/priv_keys.git -b matrixx vendor/lineage-priv/keys
+# Fix eror
+rm -rf hardware/lineage/interfaces
+git clone https://github.com/LineageOS/android_hardware_lineage_interfaces.git -b lineage-22.2 hardware/lineage/interfaces
 # Export
 export BUILD_USERNAME=dnryd
 export BUILD_HOSTNAME=pangokceria
