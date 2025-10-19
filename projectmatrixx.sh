@@ -6,7 +6,7 @@ repo init -u https://github.com/ProjectMatrixx/android.git -b 15.0 --git-lfs
 # sync
 /opt/crave/resync.sh || repo sync
 # cloning trees
-rm -rf device/xiaomi/earth
+rm -rf device/xiaomi/earth kernel/xiaomi/earth vendor/xiaomi/earth
 git clone https://github.com/AbuRider/device_xiaomi_earth.git -b Matrixx device/xiaomi/earth
 git clone https://github.com/mt6768-dev/proprietary_vendor_xiaomi_earth.git -b lineage-22.2 vendor/xiaomi/earth
 git clone https://github.com/mt6768-dev/android_kernel_xiaomi_earth.git -b lineage-22.2 kernel/xiaomi/earth
