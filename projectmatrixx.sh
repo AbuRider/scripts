@@ -19,7 +19,7 @@ git clone https://github.com/AbuRider/priv_keys.git -b matrixx vendor/lineage-pr
 rm -rf hardware/lineage/interfaces
 git clone https://github.com/LineageOS/android_hardware_lineage_interfaces.git -b lineage-22.2 hardware/lineage/interfaces
 # Export
-export BUILD_USERNAME=mugis
+export BUILD_USERNAME=mona
 export BUILD_HOSTNAME=pangokceria
 export TZ="Asia/Jakarta"
 # starts build setup !
