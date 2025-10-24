@@ -14,6 +14,8 @@ git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-23
 git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-23.0 hardware/mediatek
 git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-23.0 device/mediatek/sepolicy_vndr
 git clone https://github.com/AbuRider/priv_keys.git -b main vendor/lineage-priv/keys
+# radio lol
+git clone https://github.com/LineageOS/android_packages_apps_FMRadio.git -b lineage-23.0 packages/apps/FMRadio
 # Export
 export BUILD_USERNAME=mona
 export BUILD_HOSTNAME=bookworm
