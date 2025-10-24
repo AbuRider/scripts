@@ -11,9 +11,9 @@ git clone https://github.com/mt6768-dev/proprietary_vendor_xiaomi_earth.git -b l
 git clone https://github.com/AbuRider/android_kernel_xiaomi_earth.git -b upstream kernel/xiaomi/earth
 # other dependencis
 git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-23.0 hardware/xiaomi
-git clone https://github.com/LineageOS/hardware_mediatek.git -b lineage-23.0 hardware/mediatek
+git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-23.0 hardware/mediatek
 git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-23.0 device/mediatek/sepolicy_vndr
-git clone https://github.com/AbuRider/priv_keys.git -b luna vendor/lunaris-priv/keys
+git clone https://github.com/AbuRider/priv_keys.git -b lunaris vendor/lunaris-priv/keys
 # Export
 export BUILD_USERNAME=mona
 export BUILD_HOSTNAME=bookworm
