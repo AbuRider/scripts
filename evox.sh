@@ -24,5 +24,5 @@ export BUILD_HOSTNAME=pangokceria
 export TZ="Asia/Jakarta"
 # starts build setup !
 . build/envsetup.sh
-lunch lineage_earth-bp1a-user
+lunch lineage_earth-bp1a-userdebug
 m evolution 
