@@ -19,7 +19,7 @@ git clone https://github.com/AbuRider/priv_keys.git -b infinity vendor/infinity-
 export BUILD_USERNAME=mona
 export BUILD_HOSTNAME=rionenomoto 
 export KBUILD_BUILD_USER=mona
-export KBUILD_BUILD_HOST=crave
+export KBUILD_BUILD_HOST=rionenomoto 
 export TZ="Asia/Jakarta"
 # starts build setup !
 . build/envsetup.sh
