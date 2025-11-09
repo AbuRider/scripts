@@ -2,7 +2,7 @@
 # Remove Clang
 rm -rf prebuilts/clang/host/linux-x86
 
-echo "==========================================="
+echo "============================================"
 echo "    Building will be started on crave"
 echo "============================================"
 
