@@ -2,6 +2,10 @@
 # Remove Clang
 rm -rf prebuilts/clang/host/linux-x86
 
+echo "==========================================="
+echo "    Building will be started on crave"
+echo "============================================"
+
 # repo init
 repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs 
 
