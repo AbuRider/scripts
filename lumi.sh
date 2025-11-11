@@ -17,13 +17,6 @@ git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-
 git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-23.0 device/mediatek/sepolicy_vndr
 git clone https://github.com/AbuRider/priv_keys.git -b main vendor/lineage-priv/keys
 
-# Webview
-rm -rf external/chromium-webview/prebuilt/arm external/chromium-webview/prebuilt/arm64 external/chromium-webview/prebuilt/x86 external/chromium-webview/prebuilt/x86_64
-git clone https://github.com/LineageOS/android_external_chromium-webview_prebuilt_arm -b main external/chromium-webview/prebuilt/arm
-git clone https://github.com/LineageOS/android_external_chromium-webview_prebuilt_arm64.git -b main external/chromium-webview/prebuilt/arm64
-git clone https://github.com/LineageOS/android_external_chromium-webview_prebuilt_x86.git -b main external/chromium-webview/prebuilt/x86
-git clone https://github.com/LineageOS/android_external_chromium-webview_prebuilt_x86_64.git -b main external/chromium-webview/prebuilt/x86_64
-
 # Export
 export BUILD_USERNAME=dnryd
 export BUILD_HOSTNAME=pangokceria
