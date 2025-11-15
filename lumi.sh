@@ -20,7 +20,6 @@ git clone https://github.com/AbuRider/priv_keys.git -b main vendor/lineage-priv/
 # Export
 export BUILD_USERNAME=dnryd
 export BUILD_HOSTNAME=pangokceria
-export TZ="Asia/Jakarta"
 
 # initiate build setup
 . build/envsetup.sh
