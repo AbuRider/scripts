@@ -28,6 +28,7 @@ export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=pangokceria
 export TZ="Asia/Jakarta"
 export ALLOW_MISSING_DEPENDENCIES=true
+export RELAX_USES_LIBRARY_CHECK=true
 
 # starts build setup !
 . build/envsetup.sh
