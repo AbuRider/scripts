@@ -1,5 +1,9 @@
 #!/bin/bash
-# Remove Clang
+# ok
+rm -rf external/chromium-webview/prebuilt/arm 
+rm -rf external/chromium-webview/prebuilt/arm64
+rm -rf external/chromium-webview/prebuilt/x86
+rm -rf external/chromium-webview/prebuilt/x86_64
 rm -rf prebuilts/clang/host/linux-x86
 
 # repo init
