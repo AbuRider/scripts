@@ -32,5 +32,5 @@ export RELAX_USES_LIBRARY_CHECK=true
 
 # starts build setup !
 . build/envsetup.sh
-lunch lineage_earth-userdebug
+lunch lineage_earth-user
 m evolution 
