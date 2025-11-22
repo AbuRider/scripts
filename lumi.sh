@@ -37,5 +37,4 @@ export TZ="Asia/Jakarta"
 
 # starts build setup !
 . build/envsetup.sh
-lunch lineage_earth-bp1a-userdebug
-mka bacon
+brunch earth 
