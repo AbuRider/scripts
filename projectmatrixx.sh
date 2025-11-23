@@ -18,6 +18,9 @@ git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-23
 git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-23.0 hardware/mediatek
 git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-23.0 device/mediatek/sepolicy_vndr
 git clone https://github.com/AbuRider/priv_keys.git -b matrixx vendor/lineage-priv/keys
+# ok
+rm -rf vendor/addons
+git clone https://github.com/AbuRider/android_vendor_addons.git -b 16.0 vendor/addons
 # Export
 export BUILD_USERNAME=oumae
 export BUILD_HOSTNAME=pangokceria
