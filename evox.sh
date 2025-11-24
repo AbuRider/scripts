@@ -30,4 +30,5 @@ export ALLOW_MISSING_DEPENDENCIES=true
 # starts build setup !
 . build/envsetup.sh
 lunch lineage_earth-bp3a-userdebug
+make installclean
 m evolution 
