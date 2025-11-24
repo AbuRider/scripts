@@ -21,7 +21,7 @@ git clone https://github.com/AbuRider/android_kernel_bumi.git -b 16 kernel/xiaom
 git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-23.0 hardware/xiaomi
 git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-23.0 hardware/mediatek
 git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-23.0 device/mediatek/sepolicy_vndr
-git clone https://github.com/AbuRider/priv_keys.git -b evolusi vendor/evolution-priv/keys
+git clone https://github.com/AbuRider/priv_keys.git -b evox vendor/evolution-priv/keys
 
 # Export
 export BUILD_USERNAME=kumiko
