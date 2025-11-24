@@ -23,11 +23,12 @@ git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git
 git clone https://github.com/AbuRider/priv_keys.git -b matrixx vendor/lineage-priv/keys
 
 # Oke
-rm -rf vendor/lineage
+rm -rf vendor/lineage vendor/addons
 rm -rf frameworks/base
 rm -rf hardware/lineage/interfaces
 rm -rf system/core
 git clone --depth=1 https://github.com/AbuRider/android_vendor_matrixx.git -b 15.0 vendor/lineage
+git clone --depth=1 https://github.com/AbuRider/android_vendor_addons.git -b 15.0 vendor/addons
 git clone --depth=1 https://github.com/AbuRider/android_frameworks_base_A15_metrik.git -b 15.0 frameworks/base
 git clone --depth=1 https://github.com/LineageOS/android_hardware_lineage_interfaces.git -b lineage-22.2 hardware/lineage/interfaces
 git clone --depth=1 https://github.com/AbuRider/android_system_core.git -b 15.0 system/core
