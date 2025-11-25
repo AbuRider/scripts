@@ -8,11 +8,12 @@ repo init -u https://github.com/Evolution-X/manifest -b bq1 --git-lfs
 # Sync repository
 /opt/crave/resync.sh || repo sync
 
+# remove
+rm -rf device/xiaomi/earth kernel/xiaomi/earth 
 # cloning trees
-rm -rf device/xiaomi/earth
 git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b EvolutionX-16.1 device/xiaomi/earth
 git clone https://github.com/AbuRider/proprietary_vendor_xiaomi_earth.git -b lineage-23.1 vendor/xiaomi/earth
-git clone https://github.com/AbuRider/android_kernel_xiaomi_earth.git -b 16 kernel/xiaomi/earth
+git clone https://github.com/SilverEuphonium/android_kernel_xiaomi_earth.git -b 16 kernel/xiaomi/earth
 
 # Other dependencies
 rm -rf device/mediatek/sepolicy_vndr
