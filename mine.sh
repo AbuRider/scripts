@@ -7,7 +7,7 @@ repo init -u https://github.com/LumineDroid/platform_manifest.git -b bynx --git-
 /opt/crave/resync.sh || repo sync
 # pohon
 git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Lumine-16 device/xiaomi/earth
-git clone https://github.com/AbuRider/android_kernel_xiaomi_earth.git -b 16 kernel/xiaomi/earth
+git clone https://github.com/SilverEuphonium/android_kernel_xiaomi_earth.git -b 16 kernel/xiaomi/earth
 git clone https://github.com/mt6768-dev/proprietary_vendor_xiaomi_earth.git -b lineage-23.0 vendor/xiaomi/earth
 # Other depedencies
 git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-23.0 device/mediatek/sepolicy_vndr
