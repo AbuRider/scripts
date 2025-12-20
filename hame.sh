@@ -1,10 +1,10 @@
 #!/bin/bash
 rm -rf prebuilts/clang/host/linux-x86
 
-repo init -u https://github.com/DerpFest-AOSP/android_manifest.git -b 16 --git-lfs
+repo init --depth=1 -u https://github.com/ProjectSakura/android.git -b 16-qpr0 --git-lfs
 /opt/crave/resync.sh || repo sync
 
-git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Derpfest-16 device/xiaomi/earth
+git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Sakura-16 device/xiaomi/earth
 git clone https://github.com/mt6768-dev/proprietary_vendor_xiaomi_earth.git -b lineage-23.0 vendor/xiaomi/earth
 git clone https://github.com/SilverEuphonium/android_kernel_xiaomi_earth.git -b 16 kernel/xiaomi/earth
 
@@ -18,5 +18,5 @@ export BUILD_HOSTNAME=euphonium
 export TZ="Asia/Jakarta"
 
 . build/envsetup.sh
-lunch lineage_earth-bp2a-userdebug
-mka derp
+breakfast earth userdebug
+mka bacon
