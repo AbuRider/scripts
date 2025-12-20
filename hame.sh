@@ -18,5 +18,5 @@ export BUILD_HOSTNAME=euphonium
 export TZ="Asia/Jakarta"
 
 . build/envsetup.sh
-breakfast earth userdebug
+lunch lineage_earth-bp2a-userdebug
 mka bacon
