@@ -1,5 +1,7 @@
 #!/bin/bash
 rm -rf prebuilts/clang/host/linux-x86
+rm -rf device/xiaomi/earth kernel/xiaomi/earth vendor/xioami/earth
+rm -rf hardware/mediatek hardware/xiaomi device/mediatek/sepolicy_vndr vendor/lineage-priv/keys
 
 repo init -u https://github.com/PixelOS-AOSP/android_manifest.git -b sixteen --git-lfs
 /opt/crave/resync.sh || repo sync
