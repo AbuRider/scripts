@@ -21,4 +21,5 @@ export TZ="Asia/Jakarta"
 
 . build/envsetup.sh
 breakfast earth userdebug
+make installclean
 m pixelos
