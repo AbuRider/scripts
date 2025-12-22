@@ -17,7 +17,6 @@ git clone https://github.com/AbuRider/priv_keys.git -b main vendor/lineage-priv/
 
 export BUILD_USERNAME=oumae
 export BUILD_HOSTNAME=crave
-export TZ="Asia/Jakarta"
 
 . build/envsetup.sh
 breakfast earth userdebug
