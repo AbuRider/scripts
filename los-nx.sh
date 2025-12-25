@@ -19,7 +19,6 @@ git clone https://github.com/AbuRider/priv_keys.git -b main vendor/lineage-priv/
 # Export
 export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=altosaxophone
-export TZ="Asia/Jakarta"
 
 # initiate build setup
 . build/envsetup.sh
