@@ -19,5 +19,5 @@ export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=altosaxophone
 
 . build/envsetup.sh
-axion earth userdebug gms core
+axion earth userdebug vanilla
 ax -br
