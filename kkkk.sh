@@ -1,25 +1,25 @@
 #!/bin/bash
-# fix eror
-rm -rf device/xiaomi/earth kernel/xiaomi/earth vendor/xiaomi/earth
 rm -rf prebuilts/clang/host/linux-x86
-rm -rf hardware/mediatek hardware/xiaomi device/mediatek/sepolicy_vndr vendor/lineage-priv/keys
 
-repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.1 --git-lfs
+repo init -u https://github.com/SilverEuphonium/manifest.git -b 16-qpr2 --git-lfs
 /opt/crave/resync.sh || repo sync
 
-git clone https://github.com/SilverEuphonium/android_device_xiaomi_earth.git -b Axion-16.1 device/xiaomi/earth
+git clone https://github.com/AbuRided/android_device_xiaomi_earth.git -b Mica-16.2 device/xiaomi/earth
 git clone https://github.com/AbuRider/proprietary_vendor_xiaomi_earth.git -b lineage-23.1 vendor/xiaomi/earth
-git clone https://github.com/SilverEuphonium/android_kernel_xiaomi_earth.git -b 16 kernel/xiaomi/earth
+git clone https://github.com/AbuRider/android_kernel_xiaomi_earth.git -b 16 kernel/xiaomi/earth
 
-git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-23.0 hardware/xiaomi
-git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-23.0 hardware/mediatek
-git clone https://github.com/SilverEuphonium/android_device_mediatek_sepolicy_vndr.git -b lineage-23.0 device/mediatek/sepolicy_vndr
-git clone https://github.com/AbuRider/priv_keys.git -b main vendor/lineage-priv/keys
+git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-23.2 hardware/xiaomi
+git clone https://github.com/AbuRider/android_hardware_mediatek.git -b lineage-23.2 hardware/mediatek
+git clone https://github.com/AbuRider/android_device_mediatek_sepolicy_vndr.git -b lineage-23.0 device/mediatek/sepolicy_vndr
+git clone https://github.com/AbuRider/sign.git -b mica vendor/lineage-priv/keys
 git clone https://github.com/techyminati/android_vendor_mediatek_ims.git vendor/mediatek/ims
 
-export BUILD_USERNAME=kumiko
-export BUILD_HOSTNAME=altosaxophone
+rm -rf hardware/lineage/compat
+git clone https://github.com/LineageOS/android_hardware_lineage_compat.git -b lineage-23.2 hardware/lineage/compat
+
+export BUILD_USERNAME=ririsaa
+export BUILD_HOSTNAME=windorchestra
 
 . build/envsetup.sh
-axion earth userdebug vanilla
-ax -br
+lunch mica_earth-bp4a-userdebug
+m mica-release
