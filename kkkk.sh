@@ -11,14 +11,14 @@ git clone https://github.com/AbuRider/android_kernel_xiaomi_earth.git -b 16 kern
 git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-23.2 hardware/xiaomi
 git clone https://github.com/AbuRider/android_hardware_mediatek.git -b lineage-23.2 hardware/mediatek
 git clone https://github.com/AbuRider/android_device_mediatek_sepolicy_vndr.git -b lineage-23.0 device/mediatek/sepolicy_vndr
-git clone https://github.com/AbuRider/sign.git -b mica vendor/lineage-priv/keys
+git clone https://github.com/AbuRider/sign.git -b mica vendor/mica-priv/keys
 git clone https://github.com/techyminati/android_vendor_mediatek_ims.git vendor/mediatek/ims
 
 rm -rf hardware/lineage/compat
 git clone https://github.com/LineageOS/android_hardware_lineage_compat.git -b lineage-23.2 hardware/lineage/compat
 
 export BUILD_USERNAME=ririsaa
-export BUILD_HOSTNAME=windorchestra
+export BUILD_HOSTNAME=wind_orchestra
 
 . build/envsetup.sh
 lunch mica_earth-bp4a-userdebug
