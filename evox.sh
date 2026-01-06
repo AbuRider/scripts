@@ -1,5 +1,7 @@
 #!/bin/bash
 rm -rf prebuilts/clang/host/linux-x86
+rm -rf device/xiaomi/earth kernel/xiaomi/earth vendor/xiaomi/earth
+rm -rf hardware/xiaomi hardware/mediatek device/mediatek/sepolicy_vndr vendor/evolution-priv/keys
 
 repo init -u https://github.com/Evolution-X/manifest.git -b udc --git-lfs 
 /opt/crave/resync.sh || repo sync
