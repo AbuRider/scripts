@@ -1,12 +1,12 @@
 #!/bin/bash
 # rm -rf prebuilts/clang/host/linux-x86
-rm -rf device/xiaomi/earth # kernel/xiaomi/earth vendor/xiaomi/earth
+# rm -rf device/xiaomi/earth kernel/xiaomi/earth vendor/xiaomi/earth
 # rm -rf hardware/xiaomi hardware/mediatek device/mediatek/sepolicy_vndr vendor/evolution-priv/keys
 
 # repo init -u https://github.com/Evolution-X/manifest.git -b udc --git-lfs 
 # /opt/crave/resync.sh || repo sync
 
-git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b EvolutionX-14 device/xiaomi/earth
+# git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b EvolutionX-14 device/xiaomi/earth
 # git clone https://github.com/mt6768-dev/proprietary_vendor_xiaomi_earth.git -b lineage-21 vendor/xiaomi/earth
 # git clone https://github.com/AbuRider/android_kernel_bumi.git -b 4.19.306 kernel/xiaomi/earth
 
@@ -17,9 +17,10 @@ git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Evoluti
 
 # Export
 export BUILD_USERNAME=ririsaa
-export BUILD_HOSTNAME=kumikoumae
+export BUILD_HOSTNAME=wind_orchestra
 export TZ="Asia/Jakarta"
 export ALLOW_MISSING_DEPENDENCIES=true
+export RELAX_USES_LIBRARY_CHECK=true
 
 # starts build setup !
 . build/envsetup.sh
