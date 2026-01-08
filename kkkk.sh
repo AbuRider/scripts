@@ -1,10 +1,10 @@
 #!/bin/bash
 rm -rf prebuilts/clang/host/linux-x86
 
-repo init -u https://github.com/crdroidandroid/android.git -b 16.0 --git-lfs --no-clone-bundle
+repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.1 --git-lfs
 /opt/crave/resync.sh || repo sync
 
-git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Crdroid-16.1 device/xiaomi/earth
+git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Axion-16.1 device/xiaomi/earth
 git clone https://github.com/AbuRider/proprietary_vendor_xiaomi_earth.git -b lineage-23.1 vendor/xiaomi/earth
 git clone https://github.com/AbuRider/android_kernel_xiaomi_earth.git -b 16 kernel/xiaomi/earth
 
@@ -18,4 +18,5 @@ export BUILD_USERNAME=ririsaa
 export BUILD_HOSTNAME=wind_orchestra
 
 . build/envsetup.sh
-brunch earth userdebug
+axion earth userdebug vanilla
+ax -br
