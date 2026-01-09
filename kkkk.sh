@@ -21,4 +21,5 @@ export BUILD_HOSTNAME=wind_orchestra
 
 . build/envsetup.sh
 lunch lineage_earth-bp3a-userdebug
+make installclean
 m bacon
