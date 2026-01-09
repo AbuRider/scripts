@@ -1,10 +1,12 @@
 #!/bin/bash
 rm -rf prebuilts/clang/host/linux-x86
+rm -rf device/xiaomi/earth kernel/xiaomi/earth vendor/xiaomi/earth vendor/mediatek/ims
+rm -rf hardware/mediatek hardware/xiaomi device/mediatek/sepolicy_vndr vendor/lineage-priv/keys
 
-repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.1 --git-lfs
+repo init -u https://github.com/LineageOS/android.git -b lineage-23.1 --git-lfs
 /opt/crave/resync.sh || repo sync
 
-git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Axion-16.1 device/xiaomi/earth
+git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b lineage-23.1 device/xiaomi/earth
 git clone https://github.com/AbuRider/proprietary_vendor_xiaomi_earth.git -b lineage-23.1 vendor/xiaomi/earth
 git clone https://github.com/AbuRider/android_kernel_xiaomi_earth.git -b 16 kernel/xiaomi/earth
 
@@ -18,5 +20,5 @@ export BUILD_USERNAME=ririsaa
 export BUILD_HOSTNAME=wind_orchestra
 
 . build/envsetup.sh
-axion earth userdebug vanilla
-ax -br
+lunch lineage_earth-bp3a-userdebug
+m bacon
