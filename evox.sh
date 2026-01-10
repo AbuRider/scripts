@@ -10,9 +10,9 @@ git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b lineage
 git clone https://github.com/mt6768-dev/proprietary_vendor_xiaomi_earth.git -b lineage-21 vendor/xiaomi/earth
 git clone https://github.com/AbuRider/android_kernel_bumi.git -b 4.19.306 kernel/xiaomi/earth
 
-git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-21.0 hardware/xiaomi
-git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-21.0 hardware/mediatek
-git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-21.0 device/mediatek/sepolicy_vndr
+git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-21 hardware/xiaomi
+git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-21 hardware/mediatek
+git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-21 device/mediatek/sepolicy_vndr
 git clone https://github.com/AbuRider/sign.git -b keys vendor/lineage-priv/keys
 
 # Export
