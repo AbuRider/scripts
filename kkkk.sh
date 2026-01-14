@@ -12,7 +12,7 @@ git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-23
 git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-23.1 hardware/mediatek
 git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-23.1 device/mediatek/sepolicy_vndr
 git clone https://github.com/AbuRider/sign.git -b aicp vendor/aicp-priv/keys
-git clone https://github.com/MillenniumOSS/android_vendor_mediatek_ims.git -b sixteen vendor/mediatek/ims
+git clone https://github.com/techyminati/android_vendor_mediatek_ims.git vendor/mediatek/ims
 
 export BUILD_USERNAME=ririsaa
 export BUILD_HOSTNAME=wind_orchestra
