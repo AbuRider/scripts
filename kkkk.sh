@@ -9,7 +9,7 @@ git clone https://github.com/AbuRider/proprietary_vendor_xiaomi_earth.git -b lin
 git clone https://github.com/AbuRider/android_kernel_xiaomi_earth.git -b 16 kernel/xiaomi/earth
 
 git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-23.2 hardware/xiaomi
-git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-23.2 hardware/mediatek
+git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-23.1 hardware/mediatek
 git clone https://github.com/AbuRider/android_device_mediatek_sepolicy_vndr.git -b lineage-23.2 device/mediatek/sepolicy_vndr
 git clone https://github.com/AbuRider/sign.git -b aicp vendor/aicp-priv/keys
 git clone https://github.com/techyminati/android_vendor_mediatek_ims.git vendor/mediatek/ims
