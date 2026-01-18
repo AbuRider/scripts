@@ -3,7 +3,7 @@ rm -rf prebuilts/clang/host/linux-x86
 rm -rf device/xiaomi/earth kernel/xiaomi/earth vendor/xiaomi/earth
 rm -rf hardware/xiaomi hardware/mediatek device/mediatek/sepolicy_vndr vendor/lineage-priv/keys
 
-repo init --depth=1 -u https://github.com/EunoiaOS/eunoia.git -b eunoia-1.0 --git-lfs 
+repo init --depth=1 -u https://github.com/AbuRider/eunoia.git -b eunoia-1.0 --git-lfs 
 /opt/crave/resync.sh || repo sync
 
 git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b EuOS-14 device/xiaomi/earth
