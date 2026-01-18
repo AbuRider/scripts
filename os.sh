@@ -18,6 +18,8 @@ git clone https://github.com/AbuRider/sign.git -b evok vendor/os-priv/keys
 # Export
 export BUILD_USERNAME=ririsaa
 export BUILD_HOSTNAME=wind_orchestra
+export EUNOIA_BUILDTYPE=Unofficial
+export EUNOIA_VERSION_APPEND_TIME_OF_DAY=true
 
 # starts build setup !
 . build/envsetup.sh
