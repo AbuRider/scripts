@@ -14,8 +14,9 @@ git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git
 git clone https://github.com/AbuRider/sign.git -b keys vendor/lineage-priv/keys
 git clone https://github.com/techyminati/android_vendor_mediatek_ims.git vendor/mediatek/ims
 
-export BUILD_USERNAME=ririsaa
+export BUILD_USERNAME=miyazono
 export BUILD_HOSTNAME=wind_orchestra
+export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 
 . build/envsetup.sh
 breakfast earth user
