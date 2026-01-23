@@ -16,8 +16,9 @@ git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git
 git clone https://github.com/AbuRider/sign.git -b keys vendor/lineage-priv/keys
 git clone https://github.com/techyminati/android_vendor_mediatek_ims.git vendor/mediatek/ims
 
-rm -rf device/lineage/sepolicy
+rm -rf build/soong device/lineage/sepolicy
 git clone https://github.com/SilverEuphonium/android_device_lineage_sepolicy.git -b lineage-23.1 device/lineage/sepolicy
+git clone https://github.com/SilverEuphonium/android_build_soong.git -b sixteen-qpr1 build/soong
 
 export BUILD_USERNAME=megumi
 export BUILD_HOSTNAME=wind_orchestra
