@@ -18,6 +18,7 @@ git clone https://github.com/techyminati/android_vendor_mediatek_ims.git vendor/
 
 export BUILD_USERNAME=megumi
 export BUILD_HOSTNAME=wind_orchestra
+export CUSTOM_MAINTAINER=Kumiko
 
 . build/envsetup.sh
 breakfast earth userdebug
