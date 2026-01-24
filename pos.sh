@@ -1,7 +1,7 @@
 #!/bin/bash
 rm -rf prebuilts/clang/host/linux-x86
 
-repo init -u https://github.com/PixelOS-AOSP/android_manifest.git -b sixteen-qpr1 --git-lfs
+repo init -u https://github.com/Mnzz-Prjkt/android_manifest.git -b sixteen-qpr1 --git-lfs
 /opt/crave/resync.sh || repo sync
 
 git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b PixelOS-16.1 device/xiaomi/earth
@@ -16,8 +16,9 @@ git clone https://github.com/techyminati/android_vendor_mediatek_ims.git vendor/
 
 export BUILD_USERNAME=miyazono
 export BUILD_HOSTNAME=wind_orchestra
+export CUSTOM_MAINTAINER=Kumiko
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 
 . build/envsetup.sh
-breakfast earth user
+breakfast earth userdebug
 m pixelos
