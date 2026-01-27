@@ -1,12 +1,12 @@
 #!/bin/bash
 # rm -rf prebuilts/clang/host/linux-x86
-# rm -rf device/xiaomi/earth vendor/lineage-priv/keys kernel/xiaomi/earth vendor/xiaomi/earth
+rm -rf device/xiaomi/earth # vendor/lineage-priv/keys kernel/xiaomi/earth vendor/xiaomi/earth
 # rm -rf hardware/xiaomi hardware/xiaomi device/mediatek/sepolicy_vndr
 
 # repo init -u https://github.com/LumineDroid/platform_manifest -b bellflower --git-lfs
 # /opt/crave/resync.sh || repo sync
 
-# git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Lumine-16.2 device/xiaomi/earth
+git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Lumine-16.2 device/xiaomi/earth
 # git clone https://github.com/AbuRider/proprietary_vendor_xiaomi_earth.git -b lineage-23.1 vendor/xiaomi/earth
 # git clone https://github.com/SilverEuphonium/android_kernel_xiaomi_earth.git -b 16.2 kernel/xiaomi/earth
 
