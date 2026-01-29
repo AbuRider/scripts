@@ -23,4 +23,5 @@ export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 
 . build/envsetup.sh
 lunch earth-bp4a-userdebug
-mka bacon 
+make installclean
+mka bacon
