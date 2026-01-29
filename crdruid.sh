@@ -15,6 +15,7 @@ git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-
 git clone https://github.com/AbuRider/android_device_mediatek_sepolicy_vndr.git -b Lumine device/mediatek/sepolicy_vndr
 git clone https://github.com/AbuRider/sign.git -b lumine vendor/lineage-priv/keys
 git clone https://github.com/MillenniumOSS/android_vendor_mediatek_ims.git -b sixteen vendor/mediatek/ims
+git clone https://github.com/LineageOS/android_packages_apps_EuiccPolicy.git -b lineage-23.2 packages/apps/EuiccPolicy
 
 export BUILD_USERNAME=megumi
 export BUILD_HOSTNAME=wind_orchestra
