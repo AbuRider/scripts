@@ -1,7 +1,7 @@
 #!/bin/bash
 rm -rf prebuilts/clang/host/linux-x86
 rm -rf vendor/lineage-priv/keys device/xiaomi/earth kernel/xiaomi/earth vendor/xiaomi/earth
-rm -rf hardware/xiaomi hardware/xiaomi device/mediatek/sepolicy_vndr vendor/mediatek/ims
+rm -rf hardware/xiaomi hardware/xiaomi device/mediatek/sepolicy_vndr vendor/mediatek/ims packages/apps/EuiccPolicy
 
 repo init -u https://github.com/The-Clover-Project/manifest.git -b 16-qpr2 --git-lfs
 /opt/crave/resync.sh || repo sync
