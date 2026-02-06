@@ -1,7 +1,5 @@
 #!/bin/bash
 rm -rf prebuilts/clang/host/linux-x86
-rm -rf vendor/clover-priv/keys device/xiaomi/earth kernel/xiaomi/earth vendor/xiaomi/earth
-rm -rf hardware/xiaomi hardware/xiaomi device/mediatek/sepolicy_vndr packages/apps/EuiccPolicy
 
 repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
 /opt/crave/resync.sh || repo sync
@@ -21,5 +19,4 @@ export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 
 . build/envsetup.sh
 lunch infinity_earth-userdebug
-make installclean
 m bacon
