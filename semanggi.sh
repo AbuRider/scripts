@@ -1,6 +1,7 @@
 #!/bin/bash
-rm -rf device/xiaomi/earth
+rm -rf device/xiaomi/earth hardware/mediatek
 git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Clover-16.2 device/xiaomi/earth
+git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-23.2 hardware/mediatek
 
 export BUILD_USERNAME=megumi
 export BUILD_HOSTNAME=wind_orchestra
