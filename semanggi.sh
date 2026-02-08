@@ -1,18 +1,7 @@
 #!/bin/bash
-rm -rf prebuilts/clang/host/linux-x86
-
-repo init -u https://github.com/The-Clover-Project/manifest.git -b 16-qpr2 --git-lfs
-/opt/crave/resync.sh || repo sync
-
+rm -rf device/xiaomi/earth system/sepolicy
 git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Clover-16.2 device/xiaomi/earth
-git clone https://github.com/mt6768-dev/proprietary_vendor_xiaomi_earth.git -b lineage-23.2 vendor/xiaomi/earth
-git clone https://github.com/AbuRider/android_kernel_xiaomi_earth.git -b 16.2-staging kernel/xiaomi/earth
-
-git clone https://github.com/AbuRider/android_hardware_xiaomi.git -b lineage-23.2 hardware/xiaomi
-git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-23.2 hardware/mediatek
-git clone https://github.com/AbuRider/android_device_mediatek_sepolicy_vndr.git -b Clover device/mediatek/sepolicy_vndr
-git clone https://github.com/AbuRider/sign.git -b keys2 vendor/lineage-priv/keys
-git clone https://github.com/LineageOS/android_packages_apps_EuiccPolicy.git -b lineage-23.2 packages/apps/EuiccPolicy
+git clone --depth=1 https://github.com/AbuRider/system_sepolicy.git -b 16-qpr2 system/sepolicy
 
 export BUILD_USERNAME=megumi
 export BUILD_HOSTNAME=wind_orchestra
@@ -20,4 +9,5 @@ export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 
 . build/envsetup.sh
 lunch clover_earth-bp4a-userdebug
+make installclean
 mka clover
