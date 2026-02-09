@@ -1,25 +1,21 @@
 #!/bin/bash
-# fix eror
 rm -rf prebuilts/clang/host/linux-x86
-rm -rf device/xiaomi/earth kernel/xiaomi/earth vendor/xiaomi/earth
-rm -rf hardware/xiaomi hardware/mediatek device/mediatek/sepolicy_vndr vendor/lineage-priv/keys vendor/mediatek/ims
 
-repo init -u https://github.com/laineageos/android.git -b lineage-22.2 --git-lfs
+repo init -u https://github.com/AbuRider/manifest.git -b 16-qpr2 --git-lfs
 /opt/crave/resync.sh || repo sync
 
-git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b lineage-22.2 device/xiaomi/earth
-git clone https://github.com/mt6768-dev/proprietary_vendor_xiaomi_earth.git -b lineage-22.2 vendor/xiaomi/earth
-git clone https://github.com/LineageOS/android_kernel_xiaomi_earth.git -b lineage-22.2 kernel/xiaomi/earth
+git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Mica-16.2 device/xiaomi/earth
+git clone https://github.com/mt6768-dev/proprietary_vendor_xiaomi_earth.git -b lineage-23.2 vendor/xiaomi/earth
+git clone https://github.com/AbuRider/android_kernel_xiaomi_earth.git -b 16.2-staging kernel/xiaomi/earth
 
-git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-22.2 hardware/xiaomi
-git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-22.2 hardware/mediatek
-git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-22.2 device/mediatek/sepolicy_vndr
-git clone https://github.com/AbuRider/priv_keys.git -b main vendor/lineage-priv/keys
+git clone https://github.com/AbuRider/android_hardware_xiaomi.git -b lineage-23.2 hardware/xiaomi
+git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-23.2 hardware/mediatek
+git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-23.2 device/mediatek/sepolicy_vndr
+git clone https://github.com/AbuRider/sign.git -b keys2 vendor/lineage-priv/keys
 
-export BUILD_USERNAME=kumiko
-export BUILD_HOSTNAME=altosaxophone
+export BUILD_USERNAME=megumi
+export BUILD_HOSTNAME=wind_orchestra
 
 . build/envsetup.sh
-lunch lineage_earth-bp1a-userdebug
-make installclean
-mka bacon
+lunch mica_earth-bp4a-userdebug
+m mica-releass
