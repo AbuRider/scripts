@@ -11,7 +11,7 @@ git clone https://github.com/AbuRider/android_kernel_xiaomi_earth.git -b 16.2-st
 git clone https://github.com/AbuRider/android_hardware_xiaomi.git -b lineage-23.2 hardware/xiaomi
 git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-23.2 hardware/mediatek
 git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-23.2 device/mediatek/sepolicy_vndr
-git clone https://github.com/AbuRider/sign.git -b keys2 vendor/lineage-priv/keys
+git clone https://github.com/AbuRider/sign.git -b mica vendor/mica-priv/keys
 
 export BUILD_USERNAME=megumi
 export BUILD_HOSTNAME=wind_orchestra
