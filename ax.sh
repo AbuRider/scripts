@@ -18,4 +18,4 @@ export BUILD_HOSTNAME=wind_orchestra
 
 . build/envsetup.sh
 lunch mica_earth-bp4a-userdebug
-m mica-releass
+m mica-release
