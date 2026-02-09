@@ -10,8 +10,9 @@ git clone https://github.com/AbuRider/android_kernel_xiaomi_earth.git -b 16.2-st
 
 git clone https://github.com/AbuRider/android_hardware_xiaomi.git -b Lumine-16.2 hardware/xiaomi
 git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-23.2 hardware/mediatek
-git clone https://github.com/AbuRider/android_device_mediatek_sepolicy_vndr.git -b Lumine-16.2 device/mediatek/sepolicy_vndr
+git clone https://github.com/AbuRider/android_device_mediatek_sepolicy_vndr.git -b Lumine device/mediatek/sepolicy_vndr
 git clone https://github.com/AbuRider/sign.git -b keys2 vendor/lineage-priv/keys
+git clone https://github.com/LineageOS/android_packages_apps_FMRadio.git -b lineage-23.2 packages/apps/FMRadio
 
 export BUILD_USERNAME=makinohara
 export BUILD_HOSTNAME=wind_orchestra
