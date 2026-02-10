@@ -1,5 +1,5 @@
 #!/bin/bash
-# rm -rf prebuilts/clang/host/linux-x86
+rm -rf prebuilts/clang/host/linux-x86
 rm -rf device/xiaomi/earth packages/apps/EuiccPolicy vendor/lineage-priv/keys
 
 repo init -u https://github.com/The-Clover-Project/manifest.git -b 16-qpr2 --git-lfs
