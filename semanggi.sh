@@ -1,6 +1,6 @@
 #!/bin/bash
 # rm -rf prebuilts/clang/host/linux-x86
-rm -rf device/xiaomi/earth packages/apps/EuiccPolicy
+rm -rf device/xiaomi/earth packages/apps/EuiccPolicy vendor/lineage-priv/keys
 
 repo init -u https://github.com/The-Clover-Project/manifest.git -b 16-qpr2 --git-lfs
 /opt/crave/resync.sh || repo sync
@@ -12,7 +12,7 @@ git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Semangg
 # git clone https://github.com/AbuRider/android_hardware_xiaomi.git -b Clover-16.2 hardware/xiaomi
 # git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-23.2 hardware/mediatek
 # git clone https://github.com/AbuRider/android_device_mediatek_sepolicy_vndr.git -b Clover device/mediatek/sepolicy_vndr
-# git clone https://github.com/AbuRider/sign.git -b keys2 vendor/lineage-priv/keys
+git clone https://github.com/AbuRider/sign.git -b clover vendor/clover-priv/keys
 git clone https://github.com/LineageOS/android_packages_apps_EuiccPolicy.git -b lineage-23.2 packages/apps/EuiccPolicy
 
 export BUILD_USERNAME=megumi
