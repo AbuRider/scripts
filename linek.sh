@@ -8,7 +8,7 @@ repo init -u https://github.com/LineageOS/android.git -b lineage-23.2 --git-lfs
 # cloning trees
 git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b lineage-23.2 device/xiaomi/earth
 git clone https://github.com/mt6768-dev/proprietary_vendor_xiaomi_earth.git -b lineage-23.2 vendor/xiaomi/earth
-git clone https://github.com/AbuRider/android_kernel_xiaomi_earth.git -b lineage-23.2 kernel/xiaomi/earth
+git clone https://github.com/AbuRider/android_kernel_xiaomi_earth.git -b 16.2-staging kernel/xiaomi/earth
 # Other dependencies
 git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-23.2 hardware/xiaomi
 git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-23.2 hardware/mediatek
