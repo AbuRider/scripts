@@ -4,7 +4,7 @@ on:
 
 env:
   KERNEL_REPO: https://github.com/AbuRider/android_kernel_xiaomi_earth.git 
-  KERNEL_BRANCH: 16.2-staging
+  KERNEL_BRANCH: 16.2-xxksu
   DEFCONFIG: earth_defconfig
   CLANG_URL: https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r536225.tar.gz
 
@@ -38,9 +38,6 @@ jobs:
         working-directory: kernel
         run: |
           curl -LSs "https://raw.githubusercontent.com/backslashxx/KernelSU/refs/heads/master/kernel/setup.sh" | bash -s master
-          # Setup KernelSU Hook for non-gki
-          echo "CONFIG_KSU=y" >> arch/arm64/configs/${{ env.DEFCONFIG }}
-          echo "CONFIG_TAMPER_SYSCALL_TABLE=y" >> arch/arm64/configs/${{ env.DEFCONFIG }}
 
       - name: Build Kernel
         working-directory: kernel
