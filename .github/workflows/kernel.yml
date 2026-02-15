@@ -12,13 +12,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Freeing Up Disk Space
-        uses: easimon/maximize-build-space@master
-        with:
-          root-reserve-mb: 8192
-          temp-reserve-mb: 2048
-          remove-dotnet: 'true'
-          remove-android: 'true'
 
       - name: Install Dependencies
         run: |
@@ -29,7 +22,7 @@ jobs:
       - name: Download AOSP Clang
         run: |
           mkdir clang
-          curl -L ${{ env.CLANG_URL }} | tar -xz -C clang
+          wget ${{ env.CLANG_URL }} && tar -xzvf -C clang
 
       - name: Clone Kernel Source
         run: |
