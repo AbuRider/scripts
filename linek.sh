@@ -19,5 +19,5 @@ export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=wind_orchestra
 # starts build setup !
 . build/envsetup.sh
-lunch lineage_earth-bp4a-userdebug
+lunch lineage_earth-bp4a-user
 mka bacon
