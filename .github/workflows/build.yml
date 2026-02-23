@@ -26,15 +26,15 @@ jobs:
         export TZ="Asia/Jakarta"
         echo "BUILD_TIME=$(date +'%H%M-%d%m%y')" >> $GITHUB_ENV
 
-        # Download AOSP Clang r547379
+        # Download AOSP Clang 
         mkdir clang
-        wget -qO- https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/62cdcefa89e31af2d72c366e8b5ef8db84caea62/clang-r547379.tar.gz | tar -xz -C clang
+        wget -qO- https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r536225.tar.gz | tar -xz -C clang
         export PATH=$PWD/clang/bin:$PATH
         
         curl -LSs "https://raw.githubusercontent.com/Sorayukii/KernelSU-Next/stable/kernel/setup.sh" | bash -s hookless
         export ARCH=arm64
-        export KBUILD_BUILD_USER="makinohara"
-        export KBUILD_BUILD_HOST="wind_orchestra"
+        export KBUILD_BUILD_USER="kumiko"
+        export KBUILD_BUILD_HOST="clarinet_quartet"
         ARGS="O=out ARCH=arm64 CC=clang LD=ld.lld AR=llvm-ar NM=llvm-nm STRIP=llvm-strip OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump CROSS_COMPILE=aarch64-linux-gnu- CROSS_COMPILE_ARM32=arm-linux-gnueabi- LLVM=1 LLVM_IAS=1"
         
         make $ARGS ${{ github.event.inputs.defconfig }} 2>&1 | tee defconfig.log || true
