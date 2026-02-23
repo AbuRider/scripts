@@ -7,6 +7,7 @@ on:
       branch: { description: 'Branch', required: true, default: '16.2' }
       defconfig: { description: 'Defconfig', required: true, default: 'earth_defconfig' }
       kernelsu_branch: { description: 'KSU Branch', required: false, default: 'master' }
+      kernelsu_setup : { description: 'KSU Setup Link', required: false, default: '-' }
 
 jobs:
   build:
@@ -31,7 +32,7 @@ jobs:
         wget -qO- https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r536225.tar.gz | tar -xz -C clang
         export PATH=$PWD/clang/bin:$PATH
         
-        curl -LSs "https://raw.githubusercontent.com/backslashxx/KernelSU/refs/heads/master/kernel/setup.sh" | bash -s master
+        curl -LSs "${{ github.event.inputs.kernelsu_setup }}" | bash -s ${{ github.event.inputs.kernelsu_branch }}
         export ARCH=arm64
         export KBUILD_BUILD_USER="kumiko"
         export KBUILD_BUILD_HOST="clarinet_quartet"
