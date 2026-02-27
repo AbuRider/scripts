@@ -30,7 +30,8 @@ jobs:
         
         # Download AOSP Clang 
         mkdir clang
-        wget https://github.com/PurrrsLitterbox/LLVM-stable/releases/download/llvmorg-22.1.0-rc2/clang.tar.zst | tar -xf clang.tar.zst -C clang
+        wget https://github.com/PurrrsLitterbox/LLVM-stable/releases/download/llvmorg-22.1.0-rc2/clang.tar.zst
+        tar -xf clang.tar.zst -C clang
         export PATH=$PWD/clang/bin:$PATH
         
         curl -LSs "${{ github.event.inputs.kernelsu_setup }}" | bash -s ${{ github.event.inputs.kernelsu_branch }}
