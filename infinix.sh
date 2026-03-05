@@ -13,9 +13,8 @@ git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-
 git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-23.2 device/mediatek/sepolicy_vndr
 git clone https://github.com/AbuRider/sign.git -b infinity vendor/infinity-priv/keys
 
-export BUILD_USERNAME=megumi
-export BUILD_HOSTNAME=wind_orchestra
-export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
+export BUILD_USERNAME=kumiko
+export BUILD_HOSTNAME=kitauji_quartet
 
 . build/envsetup.sh
 lunch infinity_earth-userdebug
