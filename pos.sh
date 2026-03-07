@@ -1,7 +1,5 @@
 #!/bin/bash
 rm -rf prebuilts/clang/host/linux-x86
-rm -rf device/xiaomi/earth kernel/xiaomi/earth vendor/xiaomi/earth
-rm -rf hardware/xiaomi hardware/mediatek device/mediatek/sepolicy_vndr vendor/lineage-priv/keys
 
 repo init -u https://github.com/AbuRider/pixelos_manifest.git -b sixteen-qpr2 --git-lfs
 /opt/crave/resync.sh || repo sync
