@@ -5,7 +5,7 @@ repo init -u https://github.com/AbuRider/pixelos_manifest.git -b sixteen-qpr2 --
 /opt/crave/resync.sh || repo sync
 
 git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b PixelOS-16.2 device/xiaomi/earth
-git clone https://github.com/AbuRider/proprietary_vendor_xiaomi_earth.git -b lineage-23.2 vendor/xiaomi/earth
+git clone https://github.com/mt6768-dev/proprietary_vendor_xiaomi_earth.git -b lineage-23.2 vendor/xiaomi/earth
 git clone https://github.com/AbuRider/android_kernel_xiaomi_earth.git -b 16.2-staging kernel/xiaomi/earth
 
 git clone https://github.com/AbuRider/android_hardware_xiaomi.git -b lineage-23.2 hardware/xiaomi
