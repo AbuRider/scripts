@@ -19,5 +19,4 @@ export BUILD_HOSTNAME=clarinet_quartet
 
 . build/envsetup.sh
 lunch lineage_earth-bp4a-userdebug
-make installclean
 m bacon
