@@ -1,7 +1,5 @@
 #!/bin/bash
 rm -rf prebuilts/clang/host/linux-x86 packages/apps/GameSpace packages/apps/LMOFreeform
-rm -rf device/xiaomi/earth kernel/xiaomi/earth vendor/xiaomi/earth vendor/mediatek/ims
-rm -rf hardware/xiaomi hardware/mediatek device/mediatek/sepolicy_vndr vendor/lineage-priv/keys 
 
 repo init -u https://github.com/PixelOS-AOSP/android_manifest.git -b sixteen-qpr2 --git-lfs
 /opt/crave/resync.sh || repo sync
