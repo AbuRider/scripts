@@ -1,5 +1,5 @@
 #!/bin/bash
-rm -rf prebuilts/clang/host/linux-x86 packages/apps/GameSpace packages/apps/LMOFreeform
+rm -rf prebuilts/clang/host/linux-x86 
 
 repo init -u https://github.com/PixelOS-AOSP/android_manifest.git -b sixteen-qpr2 --git-lfs
 /opt/crave/resync.sh || repo sync
@@ -19,5 +19,4 @@ export BUILD_HOSTNAME=kitauji_quartet
 
 . build/envsetup.sh
 breakfast earth userdebug
-make installclean
 m pixelos
