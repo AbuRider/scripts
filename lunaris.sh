@@ -1,5 +1,7 @@
 #!/bin/bash
 rm -rf prebuilts/clang/host/linux-x86
+rm -rf device/xiaomi/earth kernel/xiaomi/earth vendor/xiaomi/earth
+rm -rf hardware/xiaomi hardware/mediatek device/mediatek/sepolicy_vndr vendor/mediatek/ims
 
 repo init -u https://github.com/Lunaris-AOSP/android -b 16.2 --git-lfs
 /opt/crave/resync.sh || repo sync
@@ -18,5 +20,5 @@ export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=clarinet_quartet
 
 . build/envsetup.sh
-lunch lineage_earth-bp4a-userdebug
+lunch lineage_earth-bp4a-user
 m bacon
