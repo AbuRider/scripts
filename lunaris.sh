@@ -1,7 +1,5 @@
 #!/bin/bash
 rm -rf prebuilts/clang/host/linux-x86
-rm -rf device/xiaomi/earth kernel/xiaomi/earth vendor/xiaomi/earth vendor/lineage-priv/keys
-rm -rf hardware/xiaomi hardware/mediatek device/mediatek/sepolicy_vndr vendor/mediatek/ims
 
 repo init -u https://github.com/Lunaris-AOSP/android -b test --git-lfs
 /opt/crave/resync.sh || repo sync
