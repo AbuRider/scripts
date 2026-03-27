@@ -1,6 +1,5 @@
 #!/bin/bash
 rm -rf prebuilts/clang/host/linux-x86
-rm -rf device/xiaomi/earth
 
 repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.2 --git-lfs
 /opt/crave/resync.sh || repo sync
