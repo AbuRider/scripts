@@ -7,7 +7,7 @@ repo init -u https://github.com/PixelOS-AOSP/android_manifest.git -b sixteen-qpr
 git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b PixelOS-16.2 device/xiaomi/earth
 git clone https://github.com/AbuRider/sign.git -b keys2 vendor/lineage-priv/keys
 
-export BUILD_USERNAME=makinohara
+export BUILD_USERNAME=uzuki
 export BUILD_HOSTNAME=kitauji_quartet
 
 . build/envsetup.sh
