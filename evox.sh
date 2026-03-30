@@ -17,6 +17,7 @@ git clone https://github.com/MillenniumOSS/android_vendor_mediatek_ims.git -b si
 
 export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=clarinet_quartet
+export RELAX_USES_LIBRARY_CHECK=true
 
 . build/envsetup.sh
 lunch lineage_earth-bp4a-userdebug
