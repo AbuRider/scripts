@@ -19,5 +19,5 @@ export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=clarinet_quartet
 
 . build/envsetup.sh
-lunch lineage_earth-bp4a-user
+lunch lineage_earth-bp4a-userdebug
 m bacon
