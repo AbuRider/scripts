@@ -17,6 +17,7 @@ git clone https://github.com/MillenniumOSS/android_vendor_mediatek_ims.git -b si
 
 export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=clarinet_quartet
+export PRODUCT_NO_CAMERA=false
 
 . build/envsetup.sh
 lunch matrixx_earth-bp4a-userdebug
