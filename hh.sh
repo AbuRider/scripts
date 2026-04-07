@@ -12,5 +12,4 @@ export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=clarinet_quartet
 
 . build/envsetup.sh
-breakfast earth userdebug
-m bacon
+brunch earth
