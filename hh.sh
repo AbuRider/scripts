@@ -1,5 +1,5 @@
 #!/bin/bash
-rm -rf prebuilts/clang/host/linux-x86
+# rm -rf prebuilts/clang/host/linux-x86
 
 repo init -u https://github.com/xdroid-oss/manifest.git -b z0 --git-lfs
 /opt/crave/resync.sh || repo sync
