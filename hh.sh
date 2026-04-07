@@ -12,4 +12,5 @@ export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=clarinet_quartet
 
 . build/envsetup.sh
-brunch earth
+lunch xdroid_earth-bp4a-userdebug
+mka xd
