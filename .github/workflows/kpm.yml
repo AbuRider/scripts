@@ -26,6 +26,8 @@ jobs:
         sudo apt-get install -y build-essential libncurses-dev bison flex libssl-dev libelf-dev bc zip gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi python3 python-is-python3 git wget curl zstd 
         
         export TZ="Asia/Jakarta"
+        export TIMESTAMP=$(date +'%Y%m%d')-$(date +'%H%M%S')
+        export CODENAME="earth"
         echo "BUILD_TIME=$(date +'%H%M-%d%m%y')" >> $GITHUB_ENV
         
         # Download AOSP Clang 
@@ -37,7 +39,7 @@ jobs:
         curl -LSs "${{ github.event.inputs.kernelsu_setup }}" | bash -s ${{ github.event.inputs.kernelsu_branch }}
         export ARCH=arm64
         export KBUILD_BUILD_USER="kumiko"
-        export KBUILD_BUILD_HOST="clarinet_quartet"
+        export KBUILD_BUILD_HOST="kitauji_quartet"
         ARGS="O=out ARCH=arm64 CC=clang LD=ld.lld AR=llvm-ar NM=llvm-nm STRIP=llvm-strip OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump CROSS_COMPILE=aarch64-linux-gnu- CROSS_COMPILE_ARM32=arm-linux-gnueabi- LLVM=1 LLVM_IAS=1"
         
         make $ARGS ${{ github.event.inputs.defconfig }} 2>&1 | tee defconfig.log || true
@@ -49,11 +51,15 @@ jobs:
         wget https://raw.githubusercontent.com/SukiSU-Ultra/SukiSU_patch/main/kpm/patch_linux ; chmod 777 patch_linux ; ./patch_linux
         mv -f oImage Image
         cd ../../../..
-        
+
+    - name: Packing Anykernel3
+      run: |
+        git clone https://github.com/AbuRider/Anykernel3 Anykernel3
         if [ -f out/arch/arm64/boot/Image ]; then
-          ZIP_NAME="kernel${{ env.BUILD_TIME }}.zip"
-          zip -j "$ZIP_NAME" out/arch/arm64/boot/Image 2>/dev/null || zip -j "$ZIP_NAME" out/arch/arm64/boot/Image
-          echo "FINAL_ZIP=$ZIP_NAME" >> $GITHUB_ENV
+          cp out/arch/arm64/boot/Image Anykernel3/
+          cd Anykernel3
+          zip -r9 "../${{ github.event.inputs.zipname }}-${TIMESTAMP}-${CODENAME}.zip" * -x '.git*' README.md '*placeholder'
+          cd ..
         fi
 
     - name: Upload Artifacts
@@ -64,4 +70,4 @@ jobs:
         path: |
           *.log
           *.zip
-        retention-days: 7
+  
