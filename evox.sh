@@ -8,7 +8,7 @@ repo init -u https://github.com/Kitauji-High-School/pixelos_manifest.git -b sixt
 
 git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b PixelOS-16.2 device/xiaomi/earth
 
-export BUILD_USERNAME=shouko
+export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=kitauji_quartet
 
 . build/envsetup.sh
