@@ -1,0 +1,33 @@
+name: Kernel Kernel an
+
+on:
+  workflow_dispatch:
+    inputs:
+      clang: { description: 'Clang Link', required: true, default: '-' }
+      clang_name: { description: 'Clang Name', required: true, default: '-' }
+      tag: { description: 'Tag', required: true, default: '-' }
+      
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup And Run
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential libncurses-dev bison flex libssl-dev libelf-dev bc zip gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi python3 python-is-python3 git wget curl zstd 
+
+        wget -qO- ${{ github.event.inputs.clang }}
+
+    - name: Upload to Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          clang*.tar.gz
+        name: clang-${{ github.event.inputs.clang_name }}
+        tag_name: ${{ github.event.inputs.tag }}
+        body: |
+          import aosp clang
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
