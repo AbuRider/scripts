@@ -1,4 +1,4 @@
-name: Kernel Kernel an
+name: Import clang
 
 on:
   workflow_dispatch:
