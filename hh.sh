@@ -4,7 +4,7 @@ rm -rf prebuilts/clang/host/linux-x86
 repo init -u https://github.com/crdroidandroid/android.git -b 16.0 --git-lfs --no-clone-bundle
 /opt/crave/resync.sh || repo sync
 
-git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b lineage-23.2 device/xiaomi/earth
+git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b lineage-23.2 device/xiaomi/earth
 git clone https://github.com/Kitauji-High-School/vendor_xiaomi_earth.git -b 16.2 vendor/xiaomi/earth
 git clone https://github.com/Kitauji-High-School/android_kernel_xiaomi_earth.git -b 16.2-staging kernel/xiaomi/earth
 git clone https://github.com/AbuRider/sign.git -b keys2 vendor/lineage-priv/keys
