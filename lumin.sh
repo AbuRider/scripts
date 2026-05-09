@@ -4,19 +4,14 @@ rm -rf prebuilts/clang/host/linux-x86
 repo init -u https://github.com/LumineDroid/platform_manifest -b bellflower --git-lfs
 /opt/crave/resync.sh || repo sync
 
-git clone https://github.com/AbuRider/android_device_xiaomi_earth.git -b Bellflower device/xiaomi/earth
-git clone https://github.com/AbuRider/vendor_xiaomi_earth.git -b 16.2 vendor/xiaomi/earth
-git clone https://github.com/AbuRider/android_kernel_xiaomi_earth.git -b 16.2-staging kernel/xiaomi/earth
+git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b bellflower device/xiaomi/earth
 
-git clone https://github.com/AbuRider/android_hardware_xiaomi.git -b lineage-23.2 hardware/xiaomi
-git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-23.2 hardware/mediatek
-git clone https://github.com/AbuRider/android_device_mediatek_sepolicy_vndr.git -b Lumine device/mediatek/sepolicy_vndr
-git clone https://github.com/AbuRider/sign.git -b lumine vendor/lumine-priv/keys
-git clone https://github.com/MillenniumOSS/android_vendor_mediatek_ims.git -b sixteen-qpr2 vendor/mediatek/ims
-git clone https://github.com/LineageOS/android_packages_apps_FMRadio.git -b lineage-23.2 packages/apps/FMRadio
+# Megvii fixes
+rm -rf hardware/lineage/compat
+git clone https://github.com/Kitauji-High-School/android_hardware_lineage_compat.git -b lineage-23.2 hardware/lineage/compat
 
 export BUILD_USERNAME=kumiko
-export BUILD_HOSTNAME=clarinet_quartet
+export BUILD_HOSTNAME=kitauji_quartet
 
 . build/envsetup.sh
 lunch earth-bp4a-userdebug
