@@ -1,6 +1,6 @@
 #!/bin/bash
 rm -rf device/xiaomi/earth vendor/xiaomi/earth kernel/xiaomi/earth vendor/mediatek/ims
-rm -rf hardware/xiaomi hardware/mediatek device/mediatek/sepolicy_vndr
+rm -rf hardware/xiaomi hardware/mediatek device/mediatek/sepolicy_vndr packages/apps/crDroidSettings
 
 repo init -u https://github.com/Lunaris-AOSP/android -b 16.2 --git-lfs
 /opt/crave/resync.sh || repo sync
