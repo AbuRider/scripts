@@ -1,9 +1,11 @@
 #!/bin/bash
+rm -rf device/xiaomi/earth vendor/xiaomi/earth kernel/xiaomi/earth vendor/mediatek/ims
+rm -rf hardware/xiaomi hardware/mediatek device/mediatek/sepolicy_vndr
 
-repo init -u https://github.com/crdroidandroid/android.git -b 16.0 --git-lfs
+repo init -u https://github.com/Lunaris-AOSP/android -b 16.2 --git-lfs
 /opt/crave/resync.sh || repo sync
 
-git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b crDroid-16.2 device/xiaomi/earth
+git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b Lunaris-16.2 device/xiaomi/earth
 
 export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=kitauji_quartet
