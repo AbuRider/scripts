@@ -4,16 +4,15 @@ Cara Build Menggunakan Server Crave
 2. salin link raw scripts nya
 3. ke crave.io
 4. Buka devspace
-5. klo session udh berhasil, klik yg vscode aja
+5. jika session sudah terbuka, klik yg vscode
 6. open terminal vscode nya
 7. clone project ID, caranya:
 
 crave clone create --projectID 35 namaprojek
 
-Angka 35 kode Project ID AOSP
+"Angka 35 adalah kode Project ID AOSP"
 
 contoh:
-
 crave clone create --projectID 35 pixelos
 
 8. klo sudah ter clone tinggal cd ke direktori nya
@@ -22,7 +21,6 @@ crave clone create --projectID 35 pixelos
 crave run --no-patch -- "curl -LSs linkrawscript | bash"
 
 contoh:
-
 crave run --no-patch -- "curl -LSs https://raw.githubusercontent.com/AbuRider/scripts/refs/heads/main/pos.sh | bash"
 
 10. Jika sudah ada tulisan hijau bertuliskan waiting build start, bisa close aja devspaces nya
