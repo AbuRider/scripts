@@ -38,7 +38,7 @@ crave pull out/target/product/*/*.zip
 untuk mengambil file boot.img:
 crave pull out/target/product/*/*boot.img
 
-supaya lebih mudah bisa gunakan tanggal hari kamu build agar tidak terbawa untuk file zip yg lainnya, contoh:
+supaya lebih mudah bisa gunakan tanggal waktu build agar tidak terbawa untuk file zip yg lainnya, contoh:
 crave pull out/target/product/*/*20260515*.zip
 
 silahkan gunakan sesuai selera, bisa juga dengan cara melihat log build lalu salin semua output nya, hanya tambahkan crave pull didepannya
