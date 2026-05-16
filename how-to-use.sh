@@ -42,7 +42,7 @@ crave pull out/target/product/*/*boot.img
 supaya lebih mudah bisa gunakan tanggal waktu build agar tidak terbawa untuk file zip yg lainnya, contoh:
 crave pull out/target/product/*/*20260515*.zip
 
-silahkan gunakan sesuai selera, bisa juga dengan cara melihat log build lalu salin semua output nya, hanya tambahkan crave pull didepannya
+"silahkan gunakan sesuai selera, bisa juga dengan cara melihat log build lalu salin semua output nya, hanya tambahkan crave pull didepannya" 
 
 4. hasil build akan ada pada folder sesuai codename hp, lalu cd ke direktori nya
 5. bisa upload ke gofile dengan menggunakan script.
