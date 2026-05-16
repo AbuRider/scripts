@@ -55,3 +55,8 @@ chmod 777 upload.sh
 
 6. setelah selesai akan terdapat link untuk mendownload, silahkan di unduh
 7. tutup kembali devspace session jika sudah selesai
+
+############################################
+notes: ini tutorial bukan script
+credits: crave.io, lord garuda
+############################################
