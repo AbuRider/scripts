@@ -31,7 +31,7 @@ crave run --no-patch -- "curl -LSs https://raw.githubusercontent.com/AbuRider/sc
 Cara mengupload hasil build ketika sukses:
 ###########################################
 1. buka kembali devspaces nya seperti di awal
-2. cd ke direktori yang tadi telah kamu buat untuk build
+2. cd ke direktori yang tadi dipakai untuk build
 3. untuk mengambil hasil build gunakan command crave pull, caranya:
 
 crave pull out/target/product/*/*.zip
