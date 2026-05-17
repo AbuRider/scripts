@@ -1,5 +1,4 @@
 #!/bin/bash
-rm -rf prebuilts/clang/host/linux-x86
 
 repo init -u https://github.com/Kitauji-High-School/matrixx_manifest -b 15.0 --git-lfs
 /opt/crave/resync.sh || repo sync
