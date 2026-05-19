@@ -1,7 +1,4 @@
 #!/bin/bash
-cd frameworks/base
-git restore .
-cd ../..
 
 repo init -u https://github.com/Kitauji-High-School/matrixx_manifest -b 15.0 --git-lfs
 /opt/crave/resync.sh || repo sync
