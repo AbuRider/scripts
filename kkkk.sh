@@ -6,6 +6,11 @@ repo init -u https://github.com/GenesisOS/manifest.git -b yume --git-lfs
 
 git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b Genesis-16.2 device/xiaomi/earth
 
+# Edited source
+rm -rf hardware/genesis/interfaces
+git clone https://github.com/LineageOS/android_hardware_lineage_interfaces.git -b lineage-23.2 hardware/lineage/interfaces
+git clone https://github.com/LineageOS/android_packages_apps_EuiccPolicy.git -b lineage-23.2 packages/apps/EuiccPolicy
+
 export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=kitauji_quartet
 
