@@ -1,5 +1,4 @@
 #!/bin/bash
-rm -rf prebuilts/clang/host/linux-x86
 
 repo init -u https://github.com/Evolution-X/manifest -b bq2 --git-lfs
 /opt/crave/resync.sh # sync source 
