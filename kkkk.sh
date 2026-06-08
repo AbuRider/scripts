@@ -1,21 +1,21 @@
 #!/bin/bash
-rm -rf prebuilts/clang/host/linux-x86
 
-repo init --depth=1 -u https://github.com/Kitauji-High-School/pixelos_manifest.git -b sixteen-qpr2 --git-lfs
+# init source
+repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
 /opt/crave/resync.sh # sync source 
 
-git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b PixelOS-16.2 device/xiaomi/earth
+git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b Infinity-16.2 device/xiaomi/earth
 
 export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=kitauji_quartet
 
 . build/envsetup.sh
-breakfast earth userdebug
-m pixelos
+lunch infinity_earth-userdebug
+m bacon
 
 # Upload files to gofile
 echo "Upload to gofile will be started..."
-if [ -f out/target/product/earth/*.zip ]; then
+if [ -f out/target/product/earth/*3.11*.zip ]; then
   wget https://raw.githubusercontent.com/lordgaruda/GoFile-Upload/refs/heads/master/upload.sh
   chmod +x upload.sh ; ./upload.sh out/target/product/earth/*.zip
 fi
