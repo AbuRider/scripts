@@ -1,19 +1,22 @@
 #!/bin/bash
 
-git clone https://github.com/LineageOS/android_packages_apps_FMRadio.git -b lineage-23.2 packages/apps/FMRadio
+# init source
+repo init --depth=1 -u https://github.com/Lunaris-AOSP/android.git -b 16.2 --git-lfs
+/opt/crave/resync.sh # crave repo sync
+
+git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b Lunaris-16.2 device/xiaomi/earth
 
 export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=kitauji_quartet
 
 . build/envsetup.sh
-lunch earth-bp4a-userdebug
-make installclean
-mka bacon
+lunch lineage_earth-bp4a-userdebug
+m bacon
 
 # Upload files to gofile
 echo "Upload to gofile will be started..."
-if [ -f out/target/product/earth/*bellflower*.zip ]; then
+if [ -f out/target/product/earth/*202606*.zip ]; then
   wget https://raw.githubusercontent.com/lordgaruda/GoFile-Upload/refs/heads/master/upload.sh
-  chmod +x upload.sh ; ./upload.sh out/target/product/earth/*.zip
+  chmod +x upload.sh ; ./upload.sh out/target/product/earth/*202606*.zip
 fi
 echo "kkkkk"
