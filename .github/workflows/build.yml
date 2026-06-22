@@ -26,12 +26,13 @@ jobs:
         sudo apt-get install -y build-essential libncurses-dev bison flex libssl-dev libelf-dev bc zip gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi python3 python-is-python3 git wget curl zstd 
         
         export TZ="Asia/Jakarta"
+        export CODENAME="earth"
         echo "BUILD_TIME=$(date +'%H%M-%d%m%y')" >> $GITHUB_ENV
         
         # Download AOSP Clang 
         mkdir clang
-        wget https://github.com/PurrrsLitterbox/LLVM-stable/releases/download/llvmorg-22.1.4/clang.tar.zst
-        tar -xf clang.tar.zst -C clang
+        wget https://github.com/Neutron-Toolchains/clang-build-catalogue/releases/download/17062026/neutron-clang-17062026.tar.zst
+        tar -xf neutron-clang*.tar.zst -C clang
         export PATH=$PWD/clang/bin:$PATH
         
         curl -LSs "${{ github.event.inputs.kernelsu_setup }}" | bash -s ${{ github.event.inputs.kernelsu_branch }}
@@ -50,7 +51,7 @@ jobs:
           cp out/arch/arm64/boot/Image.gz Anykernel3/
           cp out/arch/arm64/boot/dts/mediatek/mt6768.dtb Anykernel3/dtb
           cd Anykernel3
-          zip -r9 "../Anykernel3-${{ github.event.inputs.zipname }}-${TIMESTAMP}-${CODENAME}.zip" * -x '.git*'
+          zip -r9 "../Anykernel3-${{ github.event.inputs.zipname }}-${{ env.BUILD_TIME }}.zip" * -x '.git*'
           cd ..
         fi
 
