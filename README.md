@@ -1,7 +1,5 @@
-####################################
-Cara Build Menggunakan Server Crave
-####################################
-1. bikin skrip di github
+# Cara Build Menggunakan Server Crave
+1. bikin skrip di github (bisa mengikuti seperti yg ada di repo ini)
 2. salin link raw scripts nya
 3. ke crave.io
 4. Buka devspace
@@ -16,7 +14,9 @@ crave clone create --projectID 35 namaprojek
 "Angka 35 adalah kode Project ID AOSP"
 
 contoh:
+```baah
 crave clone create --projectID 35 pixelos
+```
 
 8. klo sudah ter clone tinggal cd ke direktori nya
 9. jalankan command crave run untuk memulai build, caranya:
@@ -33,9 +33,7 @@ crave run --no-patch -- "curl -LSs https://raw.githubusercontent.com/AbuRider/sc
 10. Jika sudah ada tulisan hijau bertuliskan waiting build start, bisa close aja devspaces nya
 11. session bisa ditutup saja
 
-###########################################
-Cara mengupload hasil build ketika sukses:
-###########################################
+# Cara mengupload hasil build ketika sukses:
 1. buka kembali devspaces nya seperti di awal
 2. cd ke direktori yang tadi dipakai untuk build
 3. untuk mengambil hasil build gunakan command crave pull, caranya:
@@ -73,6 +71,6 @@ chmod 777 upload.sh
 6. setelah selesai akan terdapat link untuk mendownload, silahkan di unduh
 7. tutup kembali devspace session jika sudah selesai
 
-############################################
-credits: crave.io, lord garuda
-############################################
+# credits:
+crave.io
+lord garuda for gofile uploader
