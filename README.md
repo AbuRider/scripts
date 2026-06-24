@@ -1,5 +1,5 @@
 # Cara Build Menggunakan Server Crave
-1. bikin skrip di github (bisa mengikuti seperti yg ada di repo ini)
+1. bikin bash script di github (bisa mengikuti seperti yg ada di repo ini)
 2. salin link raw scripts nya
 3. ke crave.io
 4. Buka devspace
@@ -14,7 +14,7 @@ crave clone create --projectID 35 namaprojek
 "Angka 35 adalah kode Project ID AOSP"
 
 contoh:
-```baah
+```bash
 crave clone create --projectID 35 pixelos
 ```
 
@@ -74,3 +74,4 @@ chmod 777 upload.sh
 # credits:
 crave.io
 lord garuda for gofile uploader
+remember to read it first: https://fosson.top/crave
