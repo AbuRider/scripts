@@ -1,1 +1,68 @@
-Script anti gagal lho ya
+####################################
+Cara Build Menggunakan Server Crave
+####################################
+1. bikin skrip di github
+2. salin link raw scripts nya
+3. ke crave.io
+4. Buka devspace
+5. jika session sudah terbuka, klik yg vscode
+6. open terminal vscode nya
+7. clone project ID, caranya:
+
+crave clone create --projectID 35 namaprojek
+
+"Angka 35 adalah kode Project ID AOSP"
+
+contoh:
+crave clone create --projectID 35 pixelos
+
+8. klo sudah ter clone tinggal cd ke direktori nya
+9. jalankan command crave run untuk memulai build, caranya:
+
+crave run --no-patch -- "curl -LSs linkrawscript | bash"
+
+contoh:
+crave run --no-patch -- "curl -LSs https://raw.githubusercontent.com/AbuRider/scripts/refs/heads/main/pos.sh | bash"
+
+10. Jika sudah ada tulisan hijau bertuliskan waiting build start, bisa close aja devspaces nya
+11. session bisa ditutup saja
+
+###########################################
+Cara mengupload hasil build ketika sukses:
+###########################################
+1. buka kembali devspaces nya seperti di awal
+2. cd ke direktori yang tadi dipakai untuk build
+3. untuk mengambil hasil build gunakan command crave pull, caranya:
+
+crave pull out/target/product/*/*.zip
+
+untuk mengambil file boot.img:
+crave pull out/target/product/*/*boot.img
+
+supaya lebih mudah bisa gunakan tanggal waktu build agar tidak terbawa untuk file zip yg lainnya, contoh:
+```bash
+crave pull out/target/product/*/*20260515*.zip
+```
+
+"silahkan gunakan sesuai selera, bisa juga dengan cara melihat log build lalu salin semua output nya, hanya tambahkan crave pull didepannya" 
+
+4. hasil build akan ada pada folder sesuai codename hp, lalu cd ke direktori nya
+5. bisa upload ke gofile dengan menggunakan script.
+
+```bash
+wget https://raw.githubusercontent.com/lordgaruda/GoFile-Upload/refs/heads/master/upload.sh
+```
+
+```bash
+chmod 777 upload.sh
+```
+
+```bash
+./upload.sh namafile
+```
+6. setelah selesai akan terdapat link untuk mendownload, silahkan di unduh
+7. tutup kembali devspace session jika sudah selesai
+
+############################################
+credits: crave.io, lord garuda
+############################################
