@@ -9,7 +9,9 @@ Cara Build Menggunakan Server Crave
 6. open terminal vscode nya
 7. clone project ID, caranya:
 
+```bash
 crave clone create --projectID 35 namaprojek
+```
 
 "Angka 35 adalah kode Project ID AOSP"
 
@@ -19,10 +21,14 @@ crave clone create --projectID 35 pixelos
 8. klo sudah ter clone tinggal cd ke direktori nya
 9. jalankan command crave run untuk memulai build, caranya:
 
+```bash
 crave run --no-patch -- "curl -LSs linkrawscript | bash"
+```
 
 contoh:
+```bash
 crave run --no-patch -- "curl -LSs https://raw.githubusercontent.com/AbuRider/scripts/refs/heads/main/pos.sh | bash"
+```
 
 10. Jika sudah ada tulisan hijau bertuliskan waiting build start, bisa close aja devspaces nya
 11. session bisa ditutup saja
@@ -34,10 +40,14 @@ Cara mengupload hasil build ketika sukses:
 2. cd ke direktori yang tadi dipakai untuk build
 3. untuk mengambil hasil build gunakan command crave pull, caranya:
 
+```bash
 crave pull out/target/product/*/*.zip
+```
 
 untuk mengambil file boot.img:
+```bash
 crave pull out/target/product/*/*boot.img
+```
 
 supaya lebih mudah bisa gunakan tanggal waktu build agar tidak terbawa untuk file zip yg lainnya, contoh:
 ```bash
