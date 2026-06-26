@@ -4,6 +4,7 @@
 # repo init --depth=1 -u https://github.com/LumineDroid/platform_manifest -b camellia --git-lfs
 # /opt/crave/resync.sh # crave repo sync
 
+rm -rf vendor/qcom/opensource/commonsys/wfd
 git clone https://github.com/Evolution-X/vendor_qcom_opensource_wfd-commonsys.git -b cnb vendor/qcom/opensource/commonsys/wfd
 
 export BUILD_USERNAME=kumiko
