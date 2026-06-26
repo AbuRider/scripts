@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # init source
-repo init --depth=1 -u https://github.com/Kitauji-High-School/pixelos_manifest.git -b sixteen-qpr2 --git-lfs
+repo init --depth=1 -u https://github.com/Evolution-X/manifest -b cnb --git-lfs
 /opt/crave/resync.sh # crave repo sync
 
 # Device stuff's
