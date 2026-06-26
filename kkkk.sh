@@ -1,16 +1,17 @@
 #!/bin/bash
-rm -rf device/xiaomi/earth vendor/xiaomi/earth
+rm -rf device/xiaomi/earth vendor/xiaomi/earth kernel/xiaomi/earth vendor/mediatek/ims
+rm -rf hardware/mediatek hardware/xiaomi device/mediatek/sepolicy_vndr vendor/evolution-priv/keys
 
 # init source
-repo init --depth=1 -u https://github.com/Evolution-X/manifest.git -b cnb --git-lfs
+repo init --depth=1 -u https://github.com/LumineDroid/platform_manifest -b camellia --git-lfs
 /opt/crave/resync.sh # crave repo sync
 
-git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b lineage-24.0 device/xiaomi/earth
-git clone https://github.com/Kitauji-High-School/vendor_xiaomi_earth.git -b 17.0 vendor/xiaomi/earth
+git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b lumine-17.0 device/xiaomi/earth
 
 export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=kitauji_quartet
 
 . build/envsetup.sh
-lunch lineage_earth-cp2a-userdebug
-m evolution
+lunch earth-cp2a-userdebug
+make installclean
+mka bacon
