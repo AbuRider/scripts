@@ -7,7 +7,7 @@ repo init --depth=1 -u https://github.com/LumineDroid/platform_manifest -b camel
 /opt/crave/resync.sh # crave repo sync
 
 git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b Lumine-17.0 device/xiaomi/earth
-
+git clone https://github.com/LineageOS/android_packages_apps_FMRadio.git packages/apps/FMRadio
 export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=kitauji_quartet
 
