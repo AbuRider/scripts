@@ -13,4 +13,5 @@ export BUILD_HOSTNAME=kitauji_quartet
 # build start
 . build/envsetup.sh
 lunch lineage_earth-cp2a-userdebug
+make installclean
 m evolution
