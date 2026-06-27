@@ -15,3 +15,11 @@ export BUILD_HOSTNAME=kitauji_quartet
 lunch lineage_earth-cp2a-userdebug
 make installclean
 m evolution
+
+# Upload files to gofile
+echo "Upload to gofile will be started..."
+if [ -f out/target/product/earth/*.zip ]; then
+  wget https://raw.githubusercontent.com/lordgaruda/GoFile-Upload/refs/heads/master/upload.sh
+  chmod +x upload.sh ; ./upload.sh out/target/product/earth/*202606*.zip
+fi
+echo "kkkkk"
