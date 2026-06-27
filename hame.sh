@@ -4,7 +4,7 @@
 repo init --depth=1 -u https://github.com/Evolution-X/manifest -b cnb --git-lfs
 /opt/crave/resync.sh # crave repo sync
 
-rm -rf device/xiaomi/earth
+rm -rf device/xiaomi/earth device/mediatek/sepolicy_vndr
 git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b EvolutionX-17 device/xiaomi/earth
 
 export BUILD_USERNAME=kumiko
