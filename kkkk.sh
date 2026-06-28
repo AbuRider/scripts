@@ -1,4 +1,6 @@
 #!/bin/bash
+rm -rf device/xiaomi/earth vendor/xiaomi/earth
+rm -rf hardware/mediatek
 
 # init source
 # repo init --depth=1 -u https://github.com/LumineDroid/platform_manifest -b camellia --git-lfs
@@ -12,5 +14,4 @@ export BUILD_HOSTNAME=kitauji_quartet
 
 . build/envsetup.sh
 lunch earth-cp2a-userdebug
-make installclean
 mka bacon
