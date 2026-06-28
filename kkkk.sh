@@ -1,5 +1,5 @@
 #!/bin/bash
-rm -rf device/xiaomi/earth vendor/xiaomi/earth
+rm -rf device/xiaomi/earth
 rm -rf hardware/mediatek
 
 # init source
