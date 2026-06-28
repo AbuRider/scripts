@@ -3,8 +3,8 @@ rm -rf device/xiaomi/earth
 rm -rf hardware/mediatek
 
 # init source
-# repo init --depth=1 -u https://github.com/LumineDroid/platform_manifest -b camellia --git-lfs
-# /opt/crave/resync.sh # crave repo sync
+repo init --depth=1 -u https://github.com/LumineDroid/platform_manifest -b camellia --git-lfs
+/opt/crave/resync.sh # crave repo sync
 
 git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b Lumine-17 device/xiaomi/earth
 
