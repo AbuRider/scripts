@@ -15,10 +15,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
       with:
         repository: ${{ github.event.inputs.repository }}
         ref: ${{ github.event.inputs.branch }}
+        fetch-depth: 1
         submodules: recursive
 
     - name: Setup and Build
@@ -47,7 +48,8 @@ jobs:
       run: |
         git clone https://github.com/AbuRider/Anykernel3 Anykernel3
         if [ -f out/arch/arm64/boot/Image.gz-dtb ]; then
-          cp out/arch/arm64/boot/Image.gz-dtb Anykernel3/
+          cp out/arch/arm64/boot/Image.gz Anykernel3/
+          cp out/arch/arm64/boot/dts/mediatek/mt6768.dtb Anykernel3/dtb
           cd Anykernel3
           zip -r9 "../Anykernel3-${{ github.event.inputs.zipname }}-${{ env.BUILD_TIME }}-earth.zip" * -x '.git*'
           cd ..
@@ -55,7 +57,7 @@ jobs:
 
     - name: Upload Artifacts
       if: always()
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
         name: Build-Result-${{ env.BUILD_TIME }}
         path: |
