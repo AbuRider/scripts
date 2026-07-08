@@ -1,4 +1,6 @@
 #!/bin/bash
+rm -rf device/xiaomi/earth
+rm -rf hardware/mediatek device/mediatek/sepolicy_vndr
 
 # init source
 repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
@@ -12,12 +14,13 @@ export BUILD_HOSTNAME=kitauji_quartet
 # build start
 . build/envsetup.sh
 lunch infinity_earth-userdebug
+make installclean
 m bacon
 
 # Upload files to gofile
 echo "Upload to gofile will be started..."
-if [ -f out/target/product/earth/*202607*.zip ]; then
+if [ -f out/target/product/earth/*3.12*.zip ]; then
   wget https://raw.githubusercontent.com/lordgaruda/GoFile-Upload/refs/heads/master/upload.sh
-  chmod +x upload.sh ; ./upload.sh out/target/product/earth/*202606*.zip
+  chmod +x upload.sh ; ./upload.sh out/target/product/earth/*3.12*.zip
 fi
 echo "kkkkk"
