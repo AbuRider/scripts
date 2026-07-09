@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # init source
-repo init --depth=1 -u https://github.com/LumineDroid/platform_manifest -b bellflower --git-lfs
+repo init --depth=1 -u https://github.com/AbuRider/luminedruid_manifest.git -b bellflower --git-lfs
 /opt/crave/resync.sh # crave repo sync
 
 git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b Lumine-16.2 device/xiaomi/earth
