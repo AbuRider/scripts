@@ -53,7 +53,7 @@ jobs:
           cd Anykernel3
           zip -r9 "../Anykernel3-${{ github.event.inputs.zipname }}-${{ env.BUILD_TIME }}-earth.zip" * -x '.git*'
           cd ..
-          cp out/drivers/kernelsu/ksu.ko $PWD
+          cp out/drivers/kernelsu/ksu.ko ksu_earth.ko
         fi
 
     - name: Upload Artifacts
