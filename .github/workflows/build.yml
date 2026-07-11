@@ -53,6 +53,7 @@ jobs:
           cd Anykernel3
           zip -r9 "../Anykernel3-${{ github.event.inputs.zipname }}-${{ env.BUILD_TIME }}-earth.zip" * -x '.git*'
           cd ..
+          cp out/drivers/kernelsu/ksu.ko $PWD
         fi
 
     - name: Upload Artifacts
@@ -62,4 +63,5 @@ jobs:
         name: Build-Result-${{ env.BUILD_TIME }}
         path: |
           *.log
+          *.ko
           *.zip
