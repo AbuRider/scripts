@@ -1,6 +1,4 @@
 #!/bin/bash
-rm -rf device/xiaomi/earth
-rm -rf hardware/mediatek device/mediatek/sepolicy_vndr
 
 # init rom source 
 repo init --depth=1 -u https://github.com/Lunaris-AOSP/android -b 16.2 --git-lfs
@@ -20,6 +18,6 @@ m bacon
 echo "Upload to gofile will be started..."
 if [ -f out/target/product/earth/*202607*.zip ]; then
   wget https://raw.githubusercontent.com/lordgaruda/GoFile-Upload/refs/heads/master/upload.sh
-  chmod +x upload.sh ; ./upload.sh out/target/product/earth/boot.img out/target/product/earth/*202607*.zip
+  chmod +x upload.sh ; ./upload.sh out/target/product/earth/boot.img ; ./upload.sh out/target/product/earth/*202607*.zip
 fi
 echo "kkkkk"
