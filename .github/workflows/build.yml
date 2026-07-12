@@ -52,8 +52,6 @@ jobs:
           cp out/arch/arm64/boot/dts/mediatek/mt6768.dtb Anykernel3/dtb
           cd Anykernel3
           zip -r9 "../Anykernel3-${{ github.event.inputs.zipname }}-${{ env.BUILD_TIME }}-earth.zip" * -x '.git*'
-          cd ..
-          cp out/drivers/kernelsu/ksu.ko ksu_earth.ko
         fi
 
     - name: Upload Artifacts
@@ -63,5 +61,4 @@ jobs:
         name: Build-Result-${{ env.BUILD_TIME }}
         path: |
           *.log
-          *.ko
           *.zip
