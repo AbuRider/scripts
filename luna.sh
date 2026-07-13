@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # init rom source 
-repo init --depth=1 -u https://github.com/Lunaris-AOSP/android -b 16.2 --git-lfs
-/opt/crave/resync.sh # sync source
+# repo init --depth=1 -u https://github.com/Lunaris-AOSP/android -b 16.2 --git-lfs
+# /opt/crave/resync.sh # sync source
 
 rm -rf vendor/lineage
 git clone --depth=1 https://github.com/SilverEuphonium/vendor_lineage.git -b 16.2 vendor/lineage
