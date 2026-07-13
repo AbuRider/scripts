@@ -1,5 +1,4 @@
 #!/bin/bash
-rm -rf vendor/lineage
 
 # init rom source 
 repo init --depth=1 -u https://github.com/Lunaris-AOSP/android -b 16.2 --git-lfs
