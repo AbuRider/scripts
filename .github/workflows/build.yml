@@ -22,7 +22,12 @@ jobs:
         fetch-depth: 1
         submodules: recursive
 
-    - name: Setup Additional Build
+    - name: Set Swap Space
+      uses: pierotofy/set-swap-space@master
+      with:
+        swap-size-gb: 12
+
+    - name: Setup and Build
       run: |
         sudo apt-get update
         sudo apt install nano bc bison curl flex gcc git libc6-dev libssl-dev openssl python-is-python3 ssh wget zip zstd sudo make clang gcc-arm-linux-gnueabi software-properties-common build-essential libarchive-tools gcc-aarch64-linux-gnu -y && sudo apt install python3 -y && sudo apt install cpio -y && sudo apt install lld -y && sudo apt install llvm -y
@@ -35,13 +40,6 @@ jobs:
         wget -qO- ${{ github.event.inputs.clang }} | tar -xz -C clang
         export PATH=$PWD/clang/bin:$PATH
 
-    - name: Set Swap Space
-      uses: pierotofy/set-swap-space@master
-      with:
-        swap-size-gb: 12
-
-    - name: Building Kernel
-      run: |
         curl -LSs "${{ github.event.inputs.kernelsu_setup }}" | bash -s ${{ github.event.inputs.kernelsu_branch }}
         export ARCH=arm64
         export KBUILD_BUILD_USER="kumiko"
