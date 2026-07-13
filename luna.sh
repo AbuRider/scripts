@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # init rom source 
-# repo init --depth=1 -u https://github.com/Lunaris-AOSP/android -b 16.2 --git-lfs
-# /opt/crave/resync.sh # sync source
+repo init --depth=1 -u https://github.com/Lunaris-AOSP/android -b 16.2 --git-lfs
+/opt/crave/resync.sh # sync source
+
+git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b Lunaris-16.2 device/xiaomi/earth
 
 rm -rf vendor/lineage
 git clone --depth=1 https://github.com/SilverEuphonium/vendor_lineage.git -b 16.2 vendor/lineage
-
-# git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b Lunaris-16.2 device/xiaomi/earth
 
 export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=kitauji_quartet
