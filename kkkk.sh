@@ -10,7 +10,7 @@ git clone https://github.com/aosp-pablo/device_manifest.git -b infinity .repo/lo
 export BUILD_USERNAME=Hhh
 export BUILD_HOSTNAME=Hhh
 export INFINITY_MAINTAINER="Hhh"
-export WITH_GAPPS="false"
+export WITH_GAPPS=false
 
 . build/envsetup.sh
 lunch infinity_marble-user
