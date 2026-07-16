@@ -1,18 +1,10 @@
 #!/bin/bash
+rm -rf .repo/local_manifests
 
-# init rom source 
+# init rom source & local manifest
 repo init --depth=1 -u https://github.com/LineageOS/android.git -b lineage-23.2 --git-lfs
+git clone https://github.com/Kitauji-High-School/local_manifest_earth.git -b lineage .repo/local_manifests
 /opt/crave/resync.sh # sync source
-
-git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b lineage-23.2 device/xiaomi/earth
-git clone --depth=1 https://github.com/Kitauji-High-School/vendor_xiaomi_earth.git -b lineage-23.2 vendor/xiaomi/earth
-git clone --depth=1 https://github.com/Kitauji-High-School/android_kernel_xiaomi_earth.git -b staging kernel/xiaomi/earth
-git clone https://github.com/AbuRider/sign.git -b keys vendor/lineage-priv/keys
-
-git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-23.2 hardware/xiaomi
-git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-23.2 hardware/mediatek
-git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-23.2 device/mediatek/sepolicy_vndr
-git clone https://github.com/MillenniumOSS/android_vendor_mediatek_ims.git -b sixteen-qpr2 vendor/mediatek/ims
 
 export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=kitauji_quartet
