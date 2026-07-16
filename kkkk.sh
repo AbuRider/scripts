@@ -2,8 +2,8 @@
 rm -rf .repo/local_manifests
 
 # init rom source & local manifest
-repo init --depth=1 -u https://github.com/LineageOS/android.git -b lineage-23.2 --git-lfs
-git clone https://github.com/Kitauji-High-School/local_manifest_earth.git -b lineage .repo/local_manifests
+repo init --depth=1 -u https://github.com/LineageOS/android.git -b lineage-24.0 --git-lfs
+git clone https://github.com/Kitauji-High-School/local_manifest_earth.git -b lineage2 .repo/local_manifests
 /opt/crave/resync.sh # sync source
 
 export BUILD_USERNAME=kumiko
@@ -11,7 +11,7 @@ export BUILD_HOSTNAME=kitauji_quartet
 
 # build start
 . build/envsetup.sh
-lunch lineage_earth-bp4a-userdebug
+lunch lineage_earth-cp2a-userdebug
 m bacon
 
 # Upload files to gofile
