@@ -1,17 +1,31 @@
 #!/bin/bash
-rm -rf .repo/local_manifests
 
-# init source
-repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
-# Clone local manifests
-git clone https://github.com/aosp-pablo/device_manifest.git -b infinity .repo/local_manifests
-/opt/crave/resync.sh # crave repo sync
+# init rom source 
+repo init --depth=1 -u https://github.com/LineageOS/android.git -b lineage-23.2 --git-lfs
+/opt/crave/resync.sh # sync source
 
-export BUILD_USERNAME=Hhh
-export BUILD_HOSTNAME=Hhh
-export INFINITY_MAINTAINER="Hhh"
-export WITH_GAPPS=false
+git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b lineage-23.2 device/xiaomi/earth
+git clone --depth=1 https://github.com/Kitauji-High-School/vendor_xiaomi_earth.git -b lineage-23.2 vendor/xiaomi/earth
+git clone --depth=1 https://github.com/Kitauji-High-School/android_kernel_xiaomi_earth.git -b staging kernel/xiaomi/earth
+git clone https://github.com/AbuRider/sign.git -b keys vendor/lineage-priv/keys
 
+git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-23.2 hardware/xiaomi
+git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-23.2 hardware/mediatek
+git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-23.2 device/mediatek/sepolicy_vndr
+git clone https://github.com/MillenniumOSS/android_vendor_mediatek_ims.git -b sixteen-qpr2 vendor/mediatek/ims
+
+export BUILD_USERNAME=kumiko
+export BUILD_HOSTNAME=kitauji_quartet
+
+# build start
 . build/envsetup.sh
-lunch infinity_marble-user
-mka bacon
+lunch lineage_earth-bp4a-userdebug
+m bacon
+
+# Upload files to gofile
+echo "Upload to gofile will be started..."
+if [ -f out/target/product/earth/*202607*.zip ]; then
+  wget https://raw.githubusercontent.com/lordgaruda/GoFile-Upload/refs/heads/master/upload.sh
+  chmod +x upload.sh ; ./upload.sh out/target/product/earth/boot.img ; ./upload.sh out/target/product/earth/*202607*.zip
+fi
+echo "kkkkk"
