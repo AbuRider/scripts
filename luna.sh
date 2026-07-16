@@ -4,6 +4,7 @@
 repo init --depth=1 -u https://github.com/Lunaris-AOSP/android -b 16.2 --git-lfs
 /opt/crave/resync.sh # sync source
 
+rm -rf device/xiaomi/earth
 git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b Lunaris-16.2 device/xiaomi/earth
 
 rm -rf vendor/lineage
