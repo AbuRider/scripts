@@ -8,14 +8,14 @@
 7. clone project ID, caranya:
 
 ```bash
-crave clone create --projectID 35 namaprojek
+crave clone create --projectID 93 namaprojek
 ```
 
-"Angka 35 adalah kode Project ID AOSP"
+"Angka 93 adalah kode Project ID LineageOS"
 
 contoh:
 ```bash
-crave clone create --projectID 35 pixelos
+crave clone create --projectID 93 lunaris
 ```
 
 8. klo sudah ter clone tinggal cd ke direktori nya
@@ -27,7 +27,7 @@ crave run --no-patch -- "curl -LSs linkrawscript | bash"
 
 contoh:
 ```bash
-crave run --no-patch -- "curl -LSs https://raw.githubusercontent.com/AbuRider/scripts/refs/heads/main/pos.sh | bash"
+crave run --no-patch -- "curl -LSs https://raw.githubusercontent.com/AbuRider/scripts/refs/heads/main/luna.sh | bash"
 ```
 
 10. Jika sudah ada tulisan hijau bertuliskan waiting build start, bisa close aja devspaces nya
