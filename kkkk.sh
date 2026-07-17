@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Clean up old directory (Notes: Use if if necessary!)
+# Clean up old directory (Notes: Use it if necessary!)
 rm -rf .repo/local_manifests
 rm -rf device/xiaomi/earth vendor/xiaomi/earth kernel/xiaomi/earth
 rm -rf hardware/mediatek hardware/xiaomi device/mediatek/sepolicy_vndr
