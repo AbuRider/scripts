@@ -1,7 +1,8 @@
 #!/bin/bash
+rm -rf prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9
 
 # init rom source 
-repo init --depth=1 -u https://github.com/Evolution-X/manifest.git -b cnb --git-lfs
+repo init --depth=1 -u https://github.com/Evolution-X/manifest.git -b cnb --git-lfs --no-clone-bundle
 /opt/crave/resync.sh # sync source
 
 git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b EvolutionX-17.0 device/xiaomi/earth
