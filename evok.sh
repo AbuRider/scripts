@@ -1,5 +1,4 @@
 #!/bin/bash
-rm -rf prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9
 
 # init rom source 
 repo init --depth=1 -u https://github.com/Evolution-X/manifest.git -b cnb --git-lfs --no-clone-bundle
