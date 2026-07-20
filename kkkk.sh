@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # init rom source 
-repo init --depth=1 -u https://github.com/LineageOS/android -b lineage-24.0 --git-lfs
+repo init --depth=1 -u https://github.com/LineageOS/android.git -b lineage-24.0 --git-lfs
 /opt/crave/resync.sh # sync source
 
 # Device sources
