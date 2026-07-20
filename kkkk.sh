@@ -15,7 +15,6 @@ git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-
 git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-24.0 device/mediatek/sepolicy_vndr
 git clone https://github.com/MillenniumOSS/android_vendor_mediatek_ims.git -b sixteen-qpr2 vendor/mediatek/ims
 
-
 export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=kitauji_quartet
 
