@@ -15,6 +15,12 @@ git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-
 git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git -b lineage-24.0 device/mediatek/sepolicy_vndr
 git clone https://github.com/MillenniumOSS/android_vendor_mediatek_ims.git -b sixteen-qpr2 vendor/mediatek/ims
 
+# Patching build/soong
+cd build/soong
+curl -LSs "https://github.com/Kitauji-High-School/android_build_soong_lineage/commit/0187e50b176d2fa7d13d9a9e058694b5e0e06e6d.patch" -o soong1.patch ; patch -p1 < soong1.patch
+curl -LSs "https://github.com/Kitauji-High-School/android_build_soong_lineage/commit/df4d2597f4aec5740ed3576ef95b674b9ea7be84.patch" -o soong2.patch ; patch -p1 < soong2.patch
+cd ../..
+
 export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=kitauji_quartet
 
