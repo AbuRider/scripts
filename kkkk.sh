@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # init rom source 
-repo init --depth=1 -u https://github.com/Evolution-X/manifest -b cnb --git-lfs
+repo init -u https://github.com/Evolution-X/manifest -b cnb --git-lfs --depth=1 
 /opt/crave/resync.sh # sync source
 
 # Device sources
