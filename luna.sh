@@ -10,7 +10,7 @@ repo init --depth=1 -u https://github.com/Lunaris-AOSP/android -b 16.2 --git-lfs
 git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b Lunaris-16.2 device/xiaomi/earth
 
 rm -rf vendor/lineage
-git clone --depth=1 https://github.com/SilverEuphonium/vendor_lineage.git -b 16.2 vendor/lineage
+git clone --depth=1 https://github.com/AbuRider/vendor_lineage.git -b 16.2 vendor/lineage
 
 export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=kitauji_quartet
