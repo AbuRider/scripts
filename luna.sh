@@ -5,7 +5,7 @@ rm -rf vendor/lineage
 repo init --depth=1 -u https://github.com/AbuRider/lunaris_manifests.git -b 16.2 --git-lfs
 /opt/crave/resync.sh # sync source
 
-# git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b Lunaris-16.2 device/xiaomi/earth
+git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b Lunaris-16.2 device/xiaomi/earth
 
 export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=kitauji_quartet
