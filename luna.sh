@@ -1,13 +1,11 @@
 #!/bin/bash
+rm -rf vendor/lineage
 
 # init rom source 
-repo init --depth=1 -u https://github.com/Lunaris-AOSP/android -b 16.2 --git-lfs
+repo init --depth=1 -u https://github.com/AbuRider/lunaris_manifests.git -b 16.2 --git-lfs
 /opt/crave/resync.sh # sync source
 
-git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b Lunaris-16.2 device/xiaomi/earth
-
-rm -rf vendor/lineage
-git clone --depth=1 https://github.com/AbuRider/vendor_lineage.git -b 16.2 vendor/lineage
+# git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b Lunaris-16.2 device/xiaomi/earth
 
 export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=kitauji_quartet
@@ -15,6 +13,7 @@ export BUILD_HOSTNAME=kitauji_quartet
 # build start
 . build/envsetup.sh
 lunch lineage_earth-bp4a-userdebug
+make installclean
 m bacon
 
 # Upload files to gofile
