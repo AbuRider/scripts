@@ -1,5 +1,5 @@
 #!/bin/bash
-rm -rf vendor/lineage
+rm -rf device/xiaomi/earth
 
 # init rom source 
 repo init --depth=1 -u https://github.com/AbuRider/lunaris_manifests.git -b 16.2 --git-lfs
