@@ -1,5 +1,6 @@
 #!/bin/bash
 rm -rf device/xiaomi/earth
+rm -rf hardware/xiaomi hardware/mediatek device/mediatek/sepolicy_vndr
 
 # init rom source 
 repo init --depth=1 -u https://github.com/AbuRider/lunaris_manifests.git -b 16.2 --git-lfs
