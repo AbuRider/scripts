@@ -1,6 +1,4 @@
 #!/bin/bash
-rm -rf device/xiaomi/earth
-rm -rf hardware/xiaomi hardware/mediatek device/mediatek/sepolicy_vndr
 
 # init rom source 
 repo init --depth=1 -u https://github.com/AbuRider/lunaris_manifests.git -b 16.2 --git-lfs
@@ -14,7 +12,6 @@ export BUILD_HOSTNAME=kitauji_quartet
 # build start
 . build/envsetup.sh
 lunch lineage_earth-bp4a-userdebug
-make installclean
 m bacon
 
 # Upload files to gofile
