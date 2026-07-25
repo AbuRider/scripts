@@ -3,8 +3,11 @@
 # init rom source 
 repo init -u https://github.com/Evolution-X/manifest.git -b cnb --git-lfs --depth=1
 
-/opt/crave/resync.sh # repo sync
-repo sync -c --force-sync --no-clone-bundle --no-tags --force-remove-dirty
+if [ -f /opt/crave/resync.sh ]; then
+    /opt/crave/resync.sh
+else
+    repo sync -c --force-sync --no-clone-bundle --no-tags --force-remove-dirty
+fi
 
 # Device source
 git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b EvolutionX-17.0 device/xiaomi/earth
@@ -19,6 +22,6 @@ m evolution
 
 # Upload files to gofile
 if [ -f out/target/product/earth/*202607*.zip ]; then
-  wget https://raw.githubusercontent.com/lordgaruda/GoFile-Upload/refs/heads/master/upload.sh
-  chmod +x upload.sh ; ./upload.sh out/target/product/earth/boot.img ; ./upload.sh out/target/product/earth/*202607*.zip
+    wget https://raw.githubusercontent.com/lordgaruda/GoFile-Upload/refs/heads/master/upload.sh
+    chmod +x upload.sh ; ./upload.sh out/target/product/earth/boot.img ; ./upload.sh out/target/product/earth/*202607*.zip
 fi
