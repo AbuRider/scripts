@@ -4,7 +4,7 @@
 repo init -u https://github.com/Evolution-X/manifest.git -b cnb --git-lfs --depth=1
 
 /opt/crave/resync.sh # repo sync
-# repo sync -c --force-sync --no-clone-bundle --no-tags --force-remove-dirty
+repo sync -c --force-sync --no-clone-bundle --no-tags --force-remove-dirty
 
 # Device source
 git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b EvolutionX-17.0 device/xiaomi/earth
