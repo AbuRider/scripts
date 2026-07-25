@@ -3,6 +3,7 @@
 # init rom source 
 repo init -u https://github.com/Evolution-X/manifest.git -b cnb --git-lfs --depth=1
 
+# Sync source
 if [ -f /opt/crave/resync.sh ]; then
     /opt/crave/resync.sh
 else
