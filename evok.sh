@@ -2,7 +2,13 @@
 
 # init rom source 
 repo init --depth=1 -u https://github.com/Evolution-X/manifest.git -b cnb --git-lfs
-/opt/crave/resync.sh # sync source
+
+# Sync source 
+if [ -f /opt/crave/resync.sh ]; then
+  /opt/crave/resync.sh
+else
+  repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags --force-remove-dirty
+fi
 
 git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b EvolutionX-17.0 device/xiaomi/earth
 
