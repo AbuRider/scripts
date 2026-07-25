@@ -10,6 +10,7 @@ else
   repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags --force-remove-dirty
 fi
 
+# Device source
 git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b EvolutionX-17.0 device/xiaomi/earth
 
 export BUILD_USERNAME=kumiko
