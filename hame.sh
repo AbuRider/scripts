@@ -7,7 +7,7 @@ repo init --depth=1 -u https://github.com/Evolution-X/manifest.git -b cnb --git-
 if [ -f /opt/crave/resync.sh ]; then
   /opt/crave/resync.sh
 else
-  repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags --force-remove-dirty
+  repo sync -c --force-sync --no-clone-bundle --no-tags --force-remove-dirty
 fi
 
 # Device source
