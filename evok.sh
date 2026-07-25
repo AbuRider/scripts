@@ -1,6 +1,4 @@
 #!/bin/bash
-rm -rf device/xiaomi/earth vendor/xiaomi/earth kernel/xiaomi/earth
-rm -rf hardware/xiaomi hardware/mediatek device/mediatek/sepolicy_vndr vendor/lineage-priv/keys
 
 # init rom source 
 repo init --depth=1 -u https://github.com/Evolution-X/manifest.git -b cnb --git-lfs
