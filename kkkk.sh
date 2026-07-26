@@ -15,6 +15,7 @@ export BUILD_HOSTNAME=kitauji_quartet
 # build start
 . build/envsetup.sh
 lunch earth-cp2a-userdebug
+make installclean
 mka bacon 
 
 # Upload files to gofile
