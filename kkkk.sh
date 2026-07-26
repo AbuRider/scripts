@@ -1,19 +1,19 @@
 #!/bin/bash
 
 # init rom source 
-repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.2 --git-lfs --depth=1 
+repo init -u https://github.com/Pixelify-AOSP/platform_manifest -b 17 --git-lfs --depth=1
 /opt/crave/resync.sh # sync source
 
 # Device sources
-git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b Axion-16.2 device/xiaomi/earth
+git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b ASCP-17 device/xiaomi/earth
 
 export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=kitauji_quartet
 
 # build start
 . build/envsetup.sh
-axion earth userdebug va
-ax -br
+lunch earth-cp2a-userdebug
+mka bacon 
 
 # Upload files to gofile
 echo "Upload to gofile will be started..."
