@@ -1,11 +1,12 @@
 #!/bin/bash
 
 # init rom source 
-# repo init -u https://github.com/Pixelify-AOSP/platform_manifest -b 17 --git-lfs --depth=1
-# /opt/crave/resync.sh # sync source
+repo init -u https://github.com/Pixelify-AOSP/platform_manifest -b 17 --git-lfs --depth=1
+/opt/crave/resync.sh # sync source
 
 # Device sources
-# git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b ASCP-17 device/xiaomi/earth
+rm -rf device/xiaomi/earth
+git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b ASCP-17 device/xiaomi/earth
 # git clone https://github.com/LineageOS/android_packages_apps_FMRadio.git -b lineage-23.2 packages/apps/FMRadio
 
 export BUILD_USERNAME=kumiko
