@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # init rom source 
-repo init -u https://github.com/Evolution-X/manifest.git -b cnb --git-lfs --depth=1
+repo init -u https://github.com/AbuRider/evolusix_manifest.git -b cnb --git-lfs --depth=1
 
 # Sync source
 /opt/crave/resync.sh || repo sync
