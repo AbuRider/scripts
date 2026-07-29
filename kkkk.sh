@@ -1,22 +1,19 @@
 #!/bin/bash
 
 # init rom source 
-repo init -u https://github.com/Pixelify-AOSP/platform_manifest -b 17 --git-lfs --depth=1
+repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
 /opt/crave/resync.sh # sync source
 
 # Device sources
-rm -rf device/xiaomi/earth
-git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b ASCP-17 device/xiaomi/earth
-git clone https://github.com/LineageOS/android_packages_apps_FMRadio.git -b lineage-23.2 packages/apps/FMRadio
+git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b Infinity-16.2 device/xiaomi/earth
 
 export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=kitauji_quartet
 
 # build start
 . build/envsetup.sh
-lunch earth-cp2a-userdebug
-make installclean
-mka bacon 
+lunch infinity_earth-userdebug
+m bacon 
 
 # Upload files to gofile
 echo "Upload to gofile will be started..."
