@@ -1,0 +1,46 @@
+From 6e3c8d137395ab002ae7060a6ead8678749d3430 Mon Sep 17 00:00:00 2001
+From: Makinohara <aburider@proton.me>
+Date: Wed, 22 Jul 2026 09:24:42 +0000
+Subject: [PATCH] services: Fix Auto Rotate in some application not working
+
+Example:
+VLC Can't detect landscape when not use Auto Rotate or force landscape
+in VLC apps settings
+
+Literally this commit is revert
+https://github.com/Lunaris-AOSP/frameworks_base/commit/95fbcd26dfd1a3e181754c6bc59016f13ca75f
+
+Signed-off-by: Makinohara <aburider@proton.me>
+---
+ .../com/android/server/wm/DisplayRotation.java | 18 ------------------
+ 1 file changed, 18 deletions(-)
+
+diff --git a/services/core/java/com/android/server/wm/DisplayRotation.java b/services/core/java/com/android/server/wm/DisplayRotation.java
+index 884e140242ec..5587813ca654 100644
+--- a/services/core/java/com/android/server/wm/DisplayRotation.java
++++ b/services/core/java/com/android/server/wm/DisplayRotation.java
+@@ -549,24 +549,6 @@ boolean updateRotationUnchecked(boolean forceUpdate) {
+         final int lastOrientation = mLastOrientation;
+         @Surface.Rotation
+         int rotation = rotationForOrientation(lastOrientation, oldRotation);
+-
+-        // Preserve locked user rotation across screen off/on and keyguard
+-        if (mUserRotationMode == WindowManagerPolicy.USER_ROTATION_LOCKED) {
+-            final WindowContainer<?> source = mDisplayContent.getLastOrientationSource();
+-            final boolean isAppRequest = source != null &&
+-                    (source.asActivityRecord() != null ||
+-                    (source.asWindowState() != null && source.asWindowState().mActivityRecord != null));
+-
+-            // If an app explicitly requests a fixed orientation (e.g., a landscape game),
+-            // allow it to override the user lock. Otherwise, preserve the user's locked rotation.
+-            if (!isAppRequest || !ActivityInfo.isFixedOrientation(lastOrientation)) {
+-                rotation = mUserRotation;
+-                ProtoLog.v(WM_DEBUG_ORIENTATION,
+-                        "Preserving locked user rotation=%s (%d)",
+-                        Surface.rotationToString(rotation), rotation);
+-            }
+-        }
+-
+         // Use the saved rotation for tabletop mode, if set.
+         if (mFoldController != null && mFoldController.shouldRevertOverriddenRotation()) {
+             int prevRotation = rotation;
