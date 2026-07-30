@@ -39,8 +39,7 @@ jobs:
         
         # Download AOSP Clang 
         wget https://mirrors.edge.kernel.org/pub/tools/llvm/files/llvm-23.1.0-rc2-x86_64.tar.gz
-        tar -xz llvm-23.1.0-rc2-x86_64.tar.gz
-        mv llvm-23.1.0-rc2-x86_64/ clang/
+        tar -xzvf llvm-23.1.0-rc2-x86_64.tar.gz ; mv llvm-23.1.0-rc2-x86_64/ clang/
         export PATH=$PWD/clang/bin:$PATH
 
         curl -LSs "${{ github.event.inputs.kernelsu_setup }}" | bash -s ${{ github.event.inputs.kernelsu_branch }}
