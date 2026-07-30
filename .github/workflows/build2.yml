@@ -7,7 +7,6 @@ on:
       branch: { description: 'Branch', required: true, default: '16.2' }
       defconfig: { description: 'Defconfig', required: true, default: 'earth_defconfig' }
       zipname : { description: 'zip name', required: false, default: '-' }
-      # clang : { description: 'Clang URL', required: true, default: 'https://github.com/AbuRider/scripts/releases/download/20260502/clang-r596125.tar.gz' }
       kernelsu_branch: { description: 'KSU Branch', required: false, default: 'master' }
       kernelsu_setup : { description: 'KSU Setup Link', required: false, default: 'https://raw.githubusercontent.com/backslashxx/KernelSU/refs/heads/master/kernel/setup.sh' }
 
@@ -15,6 +14,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: Cleanup
+      uses: rokibhasansagar/slimhub_actions@main
+    
     - uses: actions/checkout@v5
       with:
         repository: ${{ github.event.inputs.repository }}
@@ -36,8 +38,9 @@ jobs:
         echo "BUILD_TIME=$(date +"%Y%m%d")-$(date +"%H%M%S")" >> $GITHUB_ENV
         
         # Download AOSP Clang 
-        wget -qO- https://mirrors.edge.kernel.org/pub/tools/llvm/files/llvm-23.1.0-rc1-x86_64.tar.gz ; tar -xzvf llvm-23.1.0-rc1-x86_64.tar.gz
-        mv -f llvm-23.1.0-rc1-x86_64/ clang/
+        wget https://mirrors.edge.kernel.org/pub/tools/llvm/files/llvm-23.1.0-rc2-x86_64.tar.gz
+        tar -xf llvm-23.1.0-rc2-x86_64.tar.gz
+        mv -f llvm-23.1.0-rc2-x86_64 clang
         export PATH=$PWD/clang/bin:$PATH
 
         curl -LSs "${{ github.event.inputs.kernelsu_setup }}" | bash -s ${{ github.event.inputs.kernelsu_branch }}
