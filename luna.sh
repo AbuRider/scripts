@@ -9,13 +9,11 @@ git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git
 
 # Pathing Frameworks base
 cd frameworks/base
-rm -rf fwb.patch
 wget https://raw.githubusercontent.com/AbuRider/scripts/refs/heads/main/fwb.patch ; patch -p1 < fwb.patch
 cd ../..
 
 # Patching vendor/lineage
 cd vendor/lineage
-rm -rf vendor.patch
 curl -LSs "https://github.com/Kitauji-High-School/vendor_lineage/commit/2a627f812f97556ef9222d9b3b3a3259db936303.patch" -o vendor.patch ; patch -p1 < vendor.patch
 cd ../..
 
