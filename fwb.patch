@@ -1,35 +1,43 @@
-From 6e3c8d137395ab002ae7060a6ead8678749d3430 Mon Sep 17 00:00:00 2001
-From: Makinohara <aburider@proton.me>
-Date: Wed, 22 Jul 2026 09:24:42 +0000
-Subject: [PATCH] services: Fix Auto Rotate in some application not working
+From b1d73e03e8597b4cb51b0c83847c75de62ae185a Mon Sep 17 00:00:00 2001
+From: Kumiko Oumae <oumaekumiko123@gmail.com>
+Date: Thu, 30 Jul 2026 07:32:36 +0000
+Subject: [PATCH] services: Fix Auto Landscape with locked rotation in some
+ application not working
 
 Example:
-VLC Can't detect landscape when not use Auto Rotate or force landscape
-in VLC apps settings
+VLC Can't detect landscape when not use Auto Rotate or force landscape in VLC apps settings
 
-Literally this commit is revert
-https://github.com/Lunaris-AOSP/frameworks_base/commit/95fbcd26dfd1a3e181754c6bc59016f13ca75f
-
-Signed-off-by: Makinohara <aburider@proton.me>
+Signed-off-by: Kumiko Oumae <oumaekumiko123@gmail.com>
 ---
- .../com/android/server/wm/DisplayRotation.java | 18 ------------------
- 1 file changed, 18 deletions(-)
+ .../android/server/wm/DisplayRotation.java    | 33 -------------------
+ 1 file changed, 33 deletions(-)
 
 diff --git a/services/core/java/com/android/server/wm/DisplayRotation.java b/services/core/java/com/android/server/wm/DisplayRotation.java
-index 884e140242ec..5587813ca654 100644
+index 6300e4295f92..5587813ca654 100644
 --- a/services/core/java/com/android/server/wm/DisplayRotation.java
 +++ b/services/core/java/com/android/server/wm/DisplayRotation.java
-@@ -549,24 +549,6 @@ boolean updateRotationUnchecked(boolean forceUpdate) {
+@@ -207,8 +207,6 @@ public class DisplayRotation {
+     @AllowAllRotations
+     private int mAllowAllRotations = ALLOW_ALL_ROTATIONS_UNDEFINED;
+ 
+-    private Boolean mEnableLockScreenRotation;
+-
+     private int mUserRotationAngles = -1;
+ 
+     @WindowManagerPolicy.UserRotationMode
+@@ -551,26 +549,6 @@ boolean updateRotationUnchecked(boolean forceUpdate) {
          final int lastOrientation = mLastOrientation;
          @Surface.Rotation
          int rotation = rotationForOrientation(lastOrientation, oldRotation);
 -
 -        // Preserve locked user rotation across screen off/on and keyguard
--        if (mUserRotationMode == WindowManagerPolicy.USER_ROTATION_LOCKED) {
--            final WindowContainer<?> source = mDisplayContent.getLastOrientationSource();
+-        if (getEnableLockScreenRotation()
+-                && mUserRotationMode == WindowManagerPolicy.USER_ROTATION_LOCKED) {
+-            final WindowContainer source = mDisplayContent.getLastOrientationSource();
 -            final boolean isAppRequest = source != null &&
 -                    (source.asActivityRecord() != null ||
--                    (source.asWindowState() != null && source.asWindowState().mActivityRecord != null));
+-                            (source.asWindowState() != null &&
+-                                    source.asWindowState().isActivityWindow()));
 -
 -            // If an app explicitly requests a fixed orientation (e.g., a landscape game),
 -            // allow it to override the user lock. Otherwise, preserve the user's locked rotation.
@@ -44,3 +52,21 @@ index 884e140242ec..5587813ca654 100644
          // Use the saved rotation for tabletop mode, if set.
          if (mFoldController != null && mFoldController.shouldRevertOverriddenRotation()) {
              int prevRotation = rotation;
+@@ -1333,17 +1311,6 @@ private int getAllowAllRotations() {
+         return mAllowAllRotations;
+     }
+ 
+-    private boolean getEnableLockScreenRotation() {
+-        if (mEnableLockScreenRotation == null) {
+-            // Can't read this during init() because the context doesn't have display metrics at
+-            // that time so we cannot determine tablet vs. phone then.
+-            mEnableLockScreenRotation = mContext.getResources().getBoolean(
+-                    R.bool.config_enableLockScreenRotation);
+-        }
+-
+-        return mEnableLockScreenRotation;
+-    }
+-
+     boolean isLandscapeOrSeascape(@Surface.Rotation final int rotation) {
+         return rotation == mLandscapeRotation || rotation == mSeascapeRotation;
+     }
