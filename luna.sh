@@ -25,7 +25,6 @@ export BUILD_HOSTNAME=kitauji_quartet
 # build start
 . build/envsetup.sh
 lunch lineage_earth-bp4a-userdebug
-make installclean
 m bacon
 
 # Upload files to gofile
