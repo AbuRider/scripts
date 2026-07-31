@@ -5,8 +5,8 @@ rm -rf device/xiaomi/earth vendor/xiaomi/earth kernel/xiaomi/earth
 rm -rf hardware/xiaomi hardware/mediatek device/mediatek/sepolicy_vndr
 
 # init rom source 
-# repo init -u https://github.com/Lunaris-AOSP/android -b 16.2 --git-lfs --depth=1
-# /opt/crave/resync.sh # sync source
+repo init -u https://github.com/Lunaris-AOSP/android -b 16.2 --git-lfs --depth=1
+/opt/crave/resync.sh # sync source
 
 # Device sources
 git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b Lunaris-16.2 device/xiaomi/earth
