@@ -33,9 +33,11 @@ make installclean
 m bacon
 
 # Upload files to gofile
-if [ -f out/target/product/earth/*202607*.zip ]; then
-    echo "Upload to gofile will be started..."
+echo "Upload to gofile will be started..."
+if [ -f out/target/product/earth/*202608*.zip ]; then
     wget https://raw.githubusercontent.com/lordgaruda/GoFile-Upload/refs/heads/master/upload.sh
     chmod +x upload.sh ; ./upload.sh out/target/product/earth/boot.img ; ./upload.sh out/target/product/earth/*202608*.zip
     echo "Upload Done!"
+else
+    echo "No zip found!" 
 fi
