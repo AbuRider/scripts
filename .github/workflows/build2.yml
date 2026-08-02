@@ -14,9 +14,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Cleanup
-      uses: rokibhasansagar/slimhub_actions@main
-    
     - uses: actions/checkout@v5
       with:
         repository: ${{ github.event.inputs.repository }}
@@ -39,17 +36,28 @@ jobs:
         
         # Download AOSP Clang 
         wget https://mirrors.edge.kernel.org/pub/tools/llvm/files/llvm-23.1.0-rc2-x86_64.tar.gz
-        tar -xzvf llvm-23.1.0-rc2-x86_64.tar.gz ; mv llvm-23.1.0-rc2-x86_64/ clang/
+        tar -xzvf llvm-23.1.0-rc2-x86_64.tar.gz ; mv llvm-23.1.0-rc2-x86_64 clang
         export PATH=$PWD/clang/bin:$PATH
 
         curl -LSs "${{ github.event.inputs.kernelsu_setup }}" | bash -s ${{ github.event.inputs.kernelsu_branch }}
-        export ARCH=arm64
         export KBUILD_BUILD_USER="kumiko"
         export KBUILD_BUILD_HOST="kitauji_quartet"
-        ARGS="O=out ARCH=arm64 CC=clang LD=ld.lld AR=llvm-ar NM=llvm-nm STRIP=llvm-strip OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump CLANG_TRIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-gnu- CROSS_COMPILE_ARM32=arm-linux-gnueabi- LLVM=1 LLVM_IAS=1 CONFIG_DEBUG_SECTION_MISMATCH=y"
-        
-        make $ARGS ${{ github.event.inputs.defconfig }} 2>&1 | tee defconfig.log || true
-        make -j$(nproc) $ARGS 2>&1 | tee compile.log || true
+
+        make O=out ARCH=arm64 "${{ github.event.inputs.defconfig }}"
+        make -j$(nproc --all) ARCH=arm64 SUBARCH=arm64 O=out LLVM=1 LLVM_IAS=1
+           CC=clang \
+	         AR=llvm-ar \
+	         NM=llvm-nm \
+	         LD=ld.lld \
+	         OBJCOPY=llvm-objcopy \
+	         OBJDUMP=llvm-objdump \
+	         STRIP=llvm-strip \
+	         CLANG_TRIPLE=aarch64-linux-gnu- \
+	         CROSS_COMPILE=aarch64-linux-gnu- \
+	         CROSS_COMPILE_ARM32=arm-linux-gnueabi- \
+	         CROSS_COMPILE_COMPAT=arm-linux-gnueabi- \
+	         CONFIG_DEBUG_SECTION_MISMATCH=y \
+           2>&1 | tee compile.log || true
 
     - name: Anykernel3
       run: |
