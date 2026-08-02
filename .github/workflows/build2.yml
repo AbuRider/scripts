@@ -64,3 +64,4 @@ jobs:
         path: |
           *.log
           *.zip
+          out/.config
