@@ -1,8 +1,5 @@
 #!/bin/bash
 
-rm -rf device/xiaomi/earth kernel/xiaomi/earth vendor/xiaomi/earth
-rm -rf hardware/mediatek hardware/xiaomi device/mediatek/sepolicy_vndr vendor/mediatek/ims
-
 # init rom source 
 repo init -u https://github.com/Lunaris-AOSP/android -b 16.2 --git-lfs --depth=1
 /opt/crave/resync.sh # sync source
@@ -28,7 +25,6 @@ export BUILD_HOSTNAME=kitauji_quartet
 # build start
 . build/envsetup.sh
 lunch lineage_earth-bp4a-userdebug
-make installclean
 m bacon
 
 # Upload files to gofile
