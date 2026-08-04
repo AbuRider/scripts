@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # init rom source 
-# repo init -u https://github.com/AbuRider/evolusix_manifest.git -b cnb --git-lfs --depth=1
+repo init -u https://github.com/AbuRider/evolusix_manifest.git -b cnb --git-lfs --depth=1
 
 # Sync source
-# /opt/crave/resync.sh || repo sync
+/opt/crave/resync.sh || repo sync
 
 # Device source
-# git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b EvolutionX-17.0 device/xiaomi/earth
+git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b EvolutionX-17.0 device/xiaomi/earth
 
 export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=kitauji_quartet
@@ -15,7 +15,6 @@ export BUILD_HOSTNAME=kitauji_quartet
 # build start
 . build/envsetup.sh
 lunch lineage_earth-cp2a-userdebug
-make installclean
 m evolution
 
 # Upload files to gofile
