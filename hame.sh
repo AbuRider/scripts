@@ -7,7 +7,7 @@ repo init -u https://github.com/AbuRider/evolusix_manifest.git -b cnb --git-lfs 
 /opt/crave/resync.sh || repo sync
 
 # Device source
-git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b EvolutionX-17.0 device/xiaomi/earth
+git clone https://github.com/Kitauji-High-School/android_device_xiaomi_earth.git -b EvolutionX-17 device/xiaomi/earth
 
 export BUILD_USERNAME=kumiko
 export BUILD_HOSTNAME=kitauji_quartet
